@@ -1,0 +1,313 @@
+
+
+================================================================
+== Synthesis Summary Report of 'example'
+================================================================
++ General Information: 
+    * Date:           Thu Apr 20 19:51:44 2023
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        proj_axi_master
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcvu9p-flga2104-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------+------+------+---------------------+-----------+----------+---------------------+---------------------+----------+---------+----+-------------+-------------+-----+
+    |                Modules               | Issue|      |       Latency       |  Latency  | Iteration|                     |         Trip        |          |         |    |             |             |     |
+    |                & Loops               | Type | Slack|       (cycles)      |    (ns)   |  Latency |       Interval      |        Count        | Pipelined|  BRAM   | DSP|      FF     |     LUT     | URAM|
+    +--------------------------------------+------+------+---------------------+-----------+----------+---------------------+---------------------+----------+---------+----+-------------+-------------+-----+
+    |+ example                             |     -|  0.00|                    -|          -|         -|                    -|                    -|        no|  44 (1%)|   -|  15166 (~0%)|   35404 (2%)|    -|
+    | + example_Pipeline_1                 |     -|  0.00|  4611686018427387904|  2.306e+19|         -|  4611686018427387904|                    -|        no|        -|   -|    223 (~0%)|    146 (~0%)|    -|
+    |  o Loop 1                            |     -|  3.65|  4611686018427387904|  2.306e+19|         2|                    1|  4611686018427387903|       yes|        -|   -|            -|            -|    -|
+    | + example_Pipeline_2                 |     -|  0.00|                  131|    655.000|         -|                  131|                    -|        no|        -|   -|     60 (~0%)|    544 (~0%)|    -|
+    |  o Loop 1                            |     -|  3.65|                  129|    645.000|         3|                    1|                  128|       yes|        -|   -|            -|            -|    -|
+    | + example_Pipeline_VITIS_LOOP_179_1  |     -|  0.27|                    -|          -|         -|                    -|                    -|        no|        -|   -|     39 (~0%)|    122 (~0%)|    -|
+    |  o VITIS_LOOP_179_1                  |     -|  3.65|                    -|          -|         2|                    1|                    -|       yes|        -|   -|            -|            -|    -|
+    | + dec                                |     -|  0.88|                    -|          -|         -|                    -|                    -|        no|  8 (~0%)|   -|   6569 (~0%)|   15601 (1%)|    -|
+    |  + dec_Pipeline_VITIS_LOOP_115_3     |     -|  2.38|                    -|          -|         -|                    -|                    -|        no|        -|   -|     35 (~0%)|    119 (~0%)|    -|
+    |   o VITIS_LOOP_115_3                 |     -|  3.65|                    -|          -|         2|                    1|                    -|       yes|        -|   -|            -|            -|    -|
+    |  + updateKey                         |     -|  1.74|                   12|     60.000|         -|                   12|                    -|        no|        -|   -|    372 (~0%)|    234 (~0%)|    -|
+    |   o VITIS_LOOP_451_1                 |     -|  3.65|                   10|     50.000|         2|                    1|                   10|       yes|        -|   -|            -|            -|    -|
+    |  + dec_Pipeline_decryption_ctr_loop  |     -|  0.88|                    -|          -|         -|                    -|                    -|        no|        -|   -|   2539 (~0%)|  10069 (~0%)|    -|
+    |   o decryption_ctr_loop              |     -|  3.65|                    -|          -|        20|                    1|                    -|       yes|        -|   -|            -|            -|    -|
+    |  + dec_Pipeline_VITIS_LOOP_126_4     |     -|  1.23|                    -|          -|         -|                    -|                    -|        no|        -|   -|      5 (~0%)|     66 (~0%)|    -|
+    |   o VITIS_LOOP_126_4                 |     -|  3.65|                    -|          -|         2|                    1|                    -|       yes|        -|   -|            -|            -|    -|
+    | + example_Pipeline_3                 |     -|  0.00|                  131|    655.000|         -|                  131|                    -|        no|        -|   -|     48 (~0%)|    498 (~0%)|    -|
+    |  o Loop 1                            |     -|  3.65|                  129|    645.000|         3|                    1|                  128|       yes|        -|   -|            -|            -|    -|
+    | + enc                                |     -|  0.88|                    -|          -|         -|                    -|                    -|        no|  8 (~0%)|   -|   6569 (~0%)|   15601 (1%)|    -|
+    |  + enc_Pipeline_VITIS_LOOP_63_3      |     -|  2.38|                    -|          -|         -|                    -|                    -|        no|        -|   -|     35 (~0%)|    119 (~0%)|    -|
+    |   o VITIS_LOOP_63_3                  |     -|  3.65|                    -|          -|         2|                    1|                    -|       yes|        -|   -|            -|            -|    -|
+    |  + updateKey                         |     -|  1.74|                   12|     60.000|         -|                   12|                    -|        no|        -|   -|    372 (~0%)|    234 (~0%)|    -|
+    |   o VITIS_LOOP_451_1                 |     -|  3.65|                   10|     50.000|         2|                    1|                   10|       yes|        -|   -|            -|            -|    -|
+    |  + enc_Pipeline_encryption_ctr_loop  |     -|  0.88|                    -|          -|         -|                    -|                    -|        no|        -|   -|   2539 (~0%)|  10069 (~0%)|    -|
+    |   o encryption_ctr_loop              |     -|  3.65|                    -|          -|        20|                    1|                    -|       yes|        -|   -|            -|            -|    -|
+    |  + enc_Pipeline_VITIS_LOOP_74_4      |     -|  1.23|                    -|          -|         -|                    -|                    -|        no|        -|   -|      5 (~0%)|     66 (~0%)|    -|
+    |   o VITIS_LOOP_74_4                  |     -|  3.65|                    -|          -|         2|                    1|                    -|       yes|        -|   -|            -|            -|    -|
+    | + example_Pipeline_5                 |     -|  0.00|                  131|    655.000|         -|                  131|                    -|        no|        -|   -|     48 (~0%)|    498 (~0%)|    -|
+    |  o Loop 1                            |     -|  3.65|                  129|    645.000|         3|                    1|                  128|       yes|        -|   -|            -|            -|    -|
+    | + example_Pipeline_6                 |     -|  0.00|  4611686018427387904|  2.306e+19|         -|  4611686018427387904|                    -|        no|        -|   -|    163 (~0%)|    146 (~0%)|    -|
+    |  o Loop 1                            |     -|  3.65|  4611686018427387904|  2.306e+19|         3|                    1|  4611686018427387903|       yes|        -|   -|            -|            -|    -|
+    +--------------------------------------+------+------+---------------------+-----------+----------+---------------------+---------------------+----------+---------+----+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++-------------+------------+---------------+--------+----------+
+| Interface   | Data Width | Address Width | Offset | Register |
++-------------+------------+---------------+--------+----------+
+| s_axi_BUS_A | 32         | 6             | 16     | 0        |
++-------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface   | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_BUS_A | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_BUS_A | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_BUS_A | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_BUS_A | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_BUS_A | a_1      | 0x10   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_BUS_A | a_2      | 0x14   | 32    | W      | Data signal of a                 |                                                                      |
+| s_axi_BUS_A | crypto_1 | 0x1c   | 32    | W      | Data signal of crypto            |                                                                      |
+| s_axi_BUS_A | crypto_2 | 0x20   | 32    | W      | Data signal of crypto            |                                                                      |
+| s_axi_BUS_A | size     | 0x28   | 32    | W      | Data signal of size              |                                                                      |
+| s_axi_BUS_A | enc_size | 0x30   | 32    | W      | Data signal of enc_size          |                                                                      |
++-------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| a        | inout     | pointer  |
+| crypto   | inout     | pointer  |
+| size     | in        | int      |
+| enc_size | in        | int      |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------+-----------+----------+------------------------------------+
+| Argument | HW Interface | HW Type   | HW Usage | HW Info                            |
++----------+--------------+-----------+----------+------------------------------------+
+| a        | m_axi_gmem   | interface |          |                                    |
+| a        | s_axi_BUS_A  | register  | offset   | name=a_1 offset=0x10 range=32      |
+| a        | s_axi_BUS_A  | register  | offset   | name=a_2 offset=0x14 range=32      |
+| crypto   | m_axi_gmem   | interface |          |                                    |
+| crypto   | s_axi_BUS_A  | register  | offset   | name=crypto_1 offset=0x1c range=32 |
+| crypto   | s_axi_BUS_A  | register  | offset   | name=crypto_2 offset=0x20 range=32 |
+| size     | s_axi_BUS_A  | register  |          | name=size offset=0x28 range=32     |
+| enc_size | s_axi_BUS_A  | register  |          | name=enc_size offset=0x30 range=32 |
++----------+--------------+-----------+----------+------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+-----------+--------+-------+-------------------+
+| HW Interface | Loop      | Direction | Length | Width | Location          |
++--------------+-----------+-----------+--------+-------+-------------------+
+| m_axi_gmem   | anonymous | read      | 128    | 32    | example.cpp:175:3 |
+| m_axi_gmem   | anonymous | write     | 128    | 32    | example.cpp:177:3 |
+| m_axi_gmem   | anonymous | write     | 128    | 32    | example.cpp:184:5 |
++--------------+-----------+-----------+--------+-------+-------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+----------+-----------+-------------------------------------------------------------------------------------------------------+------------+-------------------+
+| HW Interface | Variable | Loop      | Problem                                                                                               | Resolution | Location          |
++--------------+----------+-----------+-------------------------------------------------------------------------------------------------------+------------+-------------------+
+| m_axi_gmem   | crypto   | anonymous | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | example.cpp:184:5 |
+| m_axi_gmem   | crypto   | anonymous | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | example.cpp:177:3 |
+| m_axi_gmem   | crypto   | anonymous | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | example.cpp:175:3 |
++--------------+----------+-----------+-------------------------------------------------------------------------------------------------------+------------+-------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+-----------------+-----+--------+---------+
+| Name                                 | DSP | Pragma | Variable        | Op  | Impl   | Latency |
++--------------------------------------+-----+--------+-----------------+-----+--------+---------+
+| + example                            | 0   |        |                 |     |        |         |
+|  + example_Pipeline_1                | 0   |        |                 |     |        |         |
+|    empty_fu_108_p2                   | -   |        | empty           | add | fabric | 0       |
+|  + example_Pipeline_2                | 0   |        |                 |     |        |         |
+|    empty_46_fu_113_p2                | -   |        | empty_46        | add | fabric | 0       |
+|  + example_Pipeline_VITIS_LOOP_179_1 | 0   |        |                 |     |        |         |
+|    add_ln179_fu_73_p2                | -   |        | add_ln179       | add | fabric | 0       |
+|    buff_d0                           | -   |        | add_ln180       | add | fabric | 0       |
+|  + dec                               | 0   |        |                 |     |        |         |
+|   + dec_Pipeline_VITIS_LOOP_115_3    | 0   |        |                 |     |        |         |
+|     i_5_fu_83_p2                     | -   |        | i_5             | add | fabric | 0       |
+|   + updateKey (grp_updateKey_fu_227) | 0   |        |                 |     |        |         |
+|     ret_V_fu_323_p2                  | -   |        | ret_V           | add | fabric | 0       |
+|     add_ln840_fu_389_p2              | -   |        | add_ln840       | add | fabric | 0       |
+|   + dec_Pipeline_decryption_ctr_loop | 0   |        |                 |     |        |         |
+|     input_block_r_V_fu_4131_p2       | -   |        | input_block_r_V | add | fabric | 0       |
+|  + example_Pipeline_3                | 0   |        |                 |     |        |         |
+|    empty_42_fu_109_p2                | -   |        | empty_42        | add | fabric | 0       |
+|  + enc                               | 0   |        |                 |     |        |         |
+|   + enc_Pipeline_VITIS_LOOP_63_3     | 0   |        |                 |     |        |         |
+|     i_3_fu_83_p2                     | -   |        | i_3             | add | fabric | 0       |
+|   + updateKey (grp_updateKey_fu_227) | 0   |        |                 |     |        |         |
+|     ret_V_fu_323_p2                  | -   |        | ret_V           | add | fabric | 0       |
+|     add_ln840_fu_389_p2              | -   |        | add_ln840       | add | fabric | 0       |
+|   + enc_Pipeline_encryption_ctr_loop | 0   |        |                 |     |        |         |
+|     input_block_r_V_fu_4131_p2       | -   |        | input_block_r_V | add | fabric | 0       |
+|  + example_Pipeline_5                | 0   |        |                 |     |        |         |
+|    empty_38_fu_109_p2                | -   |        | empty_38        | add | fabric | 0       |
+|  + example_Pipeline_6                | 0   |        |                 |     |        |         |
+|    empty_fu_112_p2                   | -   |        | empty           | add | fabric | 0       |
++--------------------------------------+-----+--------+-----------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------------------------------+------+------+--------+---------------------+---------+--------+---------+
+| Name                                 | BRAM | URAM | Pragma | Variable            | Storage | Impl   | Latency |
++--------------------------------------+------+------+--------+---------------------+---------+--------+---------+
+| + example                            | 44   | 0    |        |                     |         |        |         |
+|   crypto_buff_U                      | 4    | -    |        | crypto_buff         | ram_1p  | auto   | 1       |
+|   ct_U                               | 4    | -    |        | ct                  | ram_1p  | auto   | 1       |
+|   pt_U                               | 4    | -    |        | pt                  | ram_1p  | auto   | 1       |
+|   buff_U                             | 16   | -    |        | buff                | ram_s2p | auto   | 1       |
+|  + dec                               | 8    | 0    |        |                     |         |        |         |
+|    ciphertextStrm_fifo_U             | 4    | -    |        | ciphertextStrm      | fifo    | memory | 0       |
+|    endCiphertextStrm_fifo_U          | -    | -    |        | endCiphertextStrm   | fifo    | memory | 0       |
+|    cipherkeyStrm_fifo_U              | -    | -    |        | cipherkeyStrm       | fifo    | srl    | 0       |
+|    IVStrm_fifo_U                     | -    | -    |        | IVStrm              | fifo    | srl    | 0       |
+|    plaintextStrm_fifo_U              | 4    | -    |        | plaintextStrm       | fifo    | memory | 0       |
+|    endPlaintextStrm_fifo_U           | -    | -    |        | endPlaintextStrm    | fifo    | memory | 0       |
+|    cipher_0_ssbox_190_U              | -    | -    | pragma | cipher_0_ssbox_190  | rom_np  | lutram | 1       |
+|   + updateKey (grp_updateKey_fu_227) | 0    | 0    |        |                     |         |        |         |
+|     Rcon_U                           | -    | -    |        | Rcon                | rom_1p  | auto   | 1       |
+|   + dec_Pipeline_decryption_ctr_loop | 0    | 0    |        |                     |         |        |         |
+|     cipher_0_p16box_188_U            | -    | -    | pragma | cipher_0_p16box_188 | rom_np  | lutram | 1       |
+|  + enc                               | 8    | 0    |        |                     |         |        |         |
+|    ciphertextStrm_fifo_U             | 4    | -    |        | ciphertextStrm      | fifo    | memory | 0       |
+|    endCiphertextStrm_fifo_U          | -    | -    |        | endCiphertextStrm   | fifo    | memory | 0       |
+|    cipherkeyStrm_fifo_U              | -    | -    |        | cipherkeyStrm       | fifo    | srl    | 0       |
+|    IVStrm_fifo_U                     | -    | -    |        | IVStrm              | fifo    | srl    | 0       |
+|    plaintextStrm_fifo_U              | 4    | -    |        | plaintextStrm       | fifo    | memory | 0       |
+|    endPlaintextStrm_fifo_U           | -    | -    |        | endPlaintextStrm    | fifo    | memory | 0       |
+|    cipher_0_ssbox_U                  | -    | -    | pragma | cipher_0_ssbox      | rom_np  | lutram | 1       |
+|   + updateKey (grp_updateKey_fu_227) | 0    | 0    |        |                     |         |        |         |
+|     Rcon_U                           | -    | -    |        | Rcon                | rom_1p  | auto   | 1       |
+|   + enc_Pipeline_encryption_ctr_loop | 0    | 0    |        |                     |         |        |         |
+|     cipher_0_p16box_U                | -    | -    | pragma | cipher_0_p16box     | rom_np  | lutram | 1       |
++--------------------------------------+------+------+--------+---------------------+---------+--------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+----------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| Type     | Options                                | Location                                                                               | Messages                                                                   |
++----------+----------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+| resource | variable = ssbox core = ROM_nP_LUTRAM  | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:40 in aestable | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource | variable = iibox core = ROM_nP_LUTRAM  | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:41 in aestable | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource | variable = i32box core = ROM_nP_LUTRAM | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:42 in aestable | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
+| resource | variable = p16box core = ROM_nP_LUTRAM | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:43 in aestable | 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead |
++----------+----------------------------------------+----------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-------------------------------------------+----------------------------------------------------------------------------------------------+
+| Type            | Options                                   | Location                                                                                     |
++-----------------+-------------------------------------------+----------------------------------------------------------------------------------------------+
+| inline          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:39 in aestable       |
+| inline          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:162 in aesenc        |
+| array_partition | variable = key_list complete dim = 1      | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:163 in aesenc        |
+| inline          | off                                       | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:167 in updatekey     |
+| pipeline        | II = 1                                    | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:173 in updatekey     |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:220 in process       |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:246 in process       |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:256 in process       |
+| inline          | off                                       | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:280 in updatekey_2   |
+| pipeline        | II = 1                                    | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:288 in updatekey_2   |
+| inline          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:321 in aesenc        |
+| array_partition | variable = key_list complete dim = 1      | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:322 in aesenc        |
+| inline          | off                                       | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:326 in updatekey     |
+| pipeline        | II = 1                                    | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:334 in updatekey     |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:376 in process       |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:402 in process       |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:412 in process       |
+| inline          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:442 in aesenc        |
+| array_partition | variable = key_list complete dim = 1      | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:443 in aesenc        |
+| inline          | off                                       | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:447 in updatekey     |
+| pipeline        | II = 1                                    | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:452 in updatekey     |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:483 in process       |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:509 in process       |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:519 in process       |
+| inline          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:573 in aesdec        |
+| array_partition | variable = key_list complete dim = 1      | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:574 in aesdec        |
+| inline          | off                                       | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:578 in updatekey     |
+| pipeline        | II = 1                                    | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:584 in updatekey     |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:648 in process       |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:665 in process       |
+| inline          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:690 in aesdec        |
+| array_partition | variable = key_list complete dim = 1      | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:691 in aesdec        |
+| inline          | off                                       | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:695 in updatekey     |
+| pipeline        | II = 1                                    | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:703 in updatekey     |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:766 in process       |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:783 in process       |
+| inline          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:808 in aesdec        |
+| array_partition | variable = key_list complete dim = 1      | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:809 in aesdec        |
+| inline          | off                                       | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:813 in updatekey     |
+| pipeline        | II = 1                                    | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:818 in updatekey     |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:870 in process       |
+| unroll          |                                           | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:887 in process       |
+| pipeline        | II = 1                                    | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/ctr.hpp:102 in aesctrencrypt |
+| pipeline        | II = 1                                    | ../../../../git/Vitis_Libraries/security/L1/include/xf_security/ctr.hpp:232 in aesctrdecrypt |
+| stream          | variable=ciphertextStrm depth=250000+1    | example.cpp:37 in enc, ciphertextStrm                                                        |
+| stream          | variable=endCiphertextStrm depth=250000+1 | example.cpp:39 in enc, endCiphertextStrm                                                     |
+| stream          | variable=cipherkeyStrm depth=2            | example.cpp:41 in enc, cipherkeyStrm                                                         |
+| stream          | variable=IVStrm depth=2                   | example.cpp:43 in enc, IVStrm                                                                |
+| stream          | variable=plaintextStrm depth=250000+1     | example.cpp:45 in enc, plaintextStrm                                                         |
+| stream          | variable=endPlaintextStrm depth=250000+1  | example.cpp:47 in enc, endPlaintextStrm                                                      |
+| stream          | variable=ciphertextStrm depth=250000+1    | example.cpp:89 in dec, ciphertextStrm                                                        |
+| stream          | variable=endCiphertextStrm depth=250000+1 | example.cpp:91 in dec, endCiphertextStrm                                                     |
+| stream          | variable=cipherkeyStrm depth=2            | example.cpp:93 in dec, cipherkeyStrm                                                         |
+| stream          | variable=IVStrm depth=2                   | example.cpp:95 in dec, IVStrm                                                                |
+| stream          | variable=plaintextStrm depth=250000+1     | example.cpp:97 in dec, plaintextStrm                                                         |
+| stream          | variable=endPlaintextStrm depth=250000+1  | example.cpp:99 in dec, endPlaintextStrm                                                      |
+| interface       | m_axi port=a depth=250000+1 offset=slave  | example.cpp:154 in example, a                                                                |
+| interface       | m_axi port=crypto depth=128 offset=slave  | example.cpp:155 in example, crypto                                                           |
+| interface       | mode=s_axilite port=a bundle=BUS_A        | example.cpp:156 in example, a                                                                |
+| interface       | mode=s_axilite port=crypto bundle=BUS_A   | example.cpp:157 in example, crypto                                                           |
+| interface       | mode=s_axilite port=return bundle=BUS_A   | example.cpp:158 in example, return                                                           |
+| interface       | mode=s_axilite port=size bundle=BUS_A     | example.cpp:159 in example, size                                                             |
+| interface       | mode=s_axilite port=enc_size bundle=BUS_A | example.cpp:160 in example, enc_size                                                         |
++-----------------+-------------------------------------------+----------------------------------------------------------------------------------------------+
+
+

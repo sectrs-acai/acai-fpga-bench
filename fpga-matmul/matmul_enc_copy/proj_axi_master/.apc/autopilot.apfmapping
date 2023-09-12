@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="enc_dec.hpp" path="/home/ubuntu/arm-cca/gitlab/fpga/matmul_enc/enc_dec.hpp"/>
+    <originFiles name="example.cpp" path="/home/ubuntu/arm-cca/gitlab/fpga/matmul_enc/example.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="example_test.cpp" path="/home/ubuntu/arm-cca/gitlab/fpga/matmul_enc/example_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,21 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado_HLS/2016.4/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'ubuntu' on host '192.33.93.235' (Linux_x86_64 version 5.8.0-63-generic) on Tue Apr 18 16:52:53 CEST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/ubuntu/arm-cca/gitlab/fpga/LS_v2'
+INFO: [HLS 200-10] Opening project '/home/ubuntu/arm-cca/gitlab/fpga/LS_v2/LS'.
+INFO: [HLS 200-10] Opening solution '/home/ubuntu/arm-cca/gitlab/fpga/LS_v2/LS/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [LIC 200-101] Checked out feature [xcvu9p]
+ERROR: [HLS 200-70] Invalid speed grade 'xcvu9p-flga2104-2L-e'. Please use 'list_part' to get valid parts.
+command 'ap_source' returned error code
+    while executing
+"source /home/ubuntu/arm-cca/gitlab/fpga/LS_v2/LS/solution1/csim.tcl"
+    invoked from within
+"hls::main /home/ubuntu/arm-cca/gitlab/fpga/LS_v2/LS/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
+INFO: [LIC 200-101] Checked in feature [xcvu9p]

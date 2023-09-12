@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="example.cpp" path="/home/ubuntu/arm-cca/gitlab/fpga/aes_ctr/example.cpp"/>
+    <originFiles name="enc_dec.hpp" path="/home/ubuntu/arm-cca/gitlab/fpga/aes_ctr/enc_dec.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="example_test.cpp" path="/home/ubuntu/arm-cca/gitlab/fpga/aes_ctr/example_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

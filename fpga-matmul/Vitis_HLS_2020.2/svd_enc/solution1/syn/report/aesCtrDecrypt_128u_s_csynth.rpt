@@ -1,0 +1,398 @@
+
+
+================================================================
+== Vitis HLS Report for 'aesCtrDecrypt_128u_s'
+================================================================
+* Date:           Sat Apr 29 12:07:49 2023
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        svd_enc
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.748 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------+-----------+---------+---------+----------+----------+-----+-----+---------+
+        |                      |           |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |       Instance       |   Module  |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +----------------------+-----------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_process_r_fu_199  |process_r  |       19|       19|  0.190 us|  0.190 us|    1|    1|      yes|
+        |grp_updateKey_fu_219  |updateKey  |       12|       12|  0.120 us|  0.120 us|   12|   12|     none|
+        +----------------------+-----------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                       |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- decryption_ctr_loop  |        ?|        ?|        21|          1|          1|     ?|       yes|
+        +-----------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      398|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        0|     -|     4586|     5406|    -|
+|Memory               |        -|     -|       24|       98|    -|
+|Multiplexer          |        -|     -|        -|     1673|    -|
+|Register             |        -|     -|     2015|       32|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     6625|     7607|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------+-----------+---------+----+------+------+-----+
+    |       Instance       |   Module  | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------+-----------+---------+----+------+------+-----+
+    |grp_process_r_fu_199  |process_r  |        0|   0|  3156|  5154|    0|
+    |grp_updateKey_fu_219  |updateKey  |        0|   0|  1430|   252|    0|
+    +----------------------+-----------+---------+----+------+------+-----+
+    |Total                 |           |        0|   0|  4586|  5406|    0|
+    +----------------------+-----------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +------------------+-------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |      Memory      |                Module               | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------------+-------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |cipher_0_0_342_U  |aesCtrDecrypt_128u_s_cipher_0_0_342  |        0|  16|  65|    0|   256|   16|     1|         4096|
+    |cipher_0_2_344_U  |aesCtrDecrypt_128u_s_cipher_0_2_344  |        0|   8|  33|    0|   256|    8|     1|         2048|
+    +------------------+-------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total             |                                     |        0|  24|  98|    0|   512|   24|     2|         6144|
+    +------------------+-------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------+----------+----+---+-----+------------+------------+
+    |            Variable Name           | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +------------------------------------+----------+----+---+-----+------------+------------+
+    |input_block_r_V_fu_463_p2           |         +|   0|  0|  135|         128|           1|
+    |ap_block_state3_pp0_stage0_iter0    |       and|   0|  0|    2|           1|           1|
+    |ap_block_pp0_stage0_01001           |        or|   0|  0|    2|           1|           1|
+    |ap_block_state1                     |        or|   0|  0|    2|           1|           1|
+    |ap_block_state23_pp0_stage0_iter20  |        or|   0|  0|    2|           1|           1|
+    |input_block_V_3_fu_659_p3           |    select|   0|  0|  123|           1|         128|
+    |ap_enable_pp0                       |       xor|   0|  0|    2|           1|           2|
+    |ap_enable_reg_pp0_iter1             |       xor|   0|  0|    2|           2|           1|
+    |plaintext_din                       |       xor|   0|  0|  128|         128|         128|
+    +------------------------------------+----------+----+---+-----+------------+------------+
+    |Total                               |          |   0|  0|  398|         264|         264|
+    +------------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------+----+-----------+-----+-----------+
+    |                   Name                   | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |IV_strm_blk_n                             |   9|          2|    1|          2|
+    |ap_NS_fsm                                 |  26|          5|    1|          5|
+    |ap_enable_reg_pp0_iter1                   |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter20                  |   9|          2|    1|          2|
+    |ap_phi_mux_e_3_phi_fu_192_p4              |   9|          2|    1|          2|
+    |ap_phi_mux_initialization_phi_fu_181_p4   |   9|          2|    1|          2|
+    |ap_phi_mux_input_block_V_4_phi_fu_170_p4  |   9|          2|  128|        256|
+    |cipher_0_2_344_address0                   |  14|          3|    8|         24|
+    |cipher_0_2_344_address1                   |  14|          3|    8|         24|
+    |cipher_0_2_344_address2                   |  14|          3|    8|         24|
+    |cipher_0_2_344_address3                   |  14|          3|    8|         24|
+    |cipher_0_2_344_ce0                        |  14|          3|    1|          3|
+    |cipher_0_2_344_ce1                        |  14|          3|    1|          3|
+    |cipher_0_2_344_ce10                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce100                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce101                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce102                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce103                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce104                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce105                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce106                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce107                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce108                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce109                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce11                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce110                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce111                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce112                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce113                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce114                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce115                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce116                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce117                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce118                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce119                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce12                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce120                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce121                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce122                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce123                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce124                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce125                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce126                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce127                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce128                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce129                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce13                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce130                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce131                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce132                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce133                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce134                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce135                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce136                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce137                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce138                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce139                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce14                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce140                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce141                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce142                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce143                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce144                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce145                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce146                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce147                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce148                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce149                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce15                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce150                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce151                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce152                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce153                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce154                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce155                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce156                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce157                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce158                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce159                      |   9|          2|    1|          2|
+    |cipher_0_2_344_ce16                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce17                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce18                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce19                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce2                        |  14|          3|    1|          3|
+    |cipher_0_2_344_ce20                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce21                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce22                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce23                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce24                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce25                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce26                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce27                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce28                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce29                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce3                        |  14|          3|    1|          3|
+    |cipher_0_2_344_ce30                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce31                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce32                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce33                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce34                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce35                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce36                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce37                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce38                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce39                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce4                        |   9|          2|    1|          2|
+    |cipher_0_2_344_ce40                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce41                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce42                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce43                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce44                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce45                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce46                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce47                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce48                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce49                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce5                        |   9|          2|    1|          2|
+    |cipher_0_2_344_ce50                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce51                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce52                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce53                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce54                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce55                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce56                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce57                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce58                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce59                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce6                        |   9|          2|    1|          2|
+    |cipher_0_2_344_ce60                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce61                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce62                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce63                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce64                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce65                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce66                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce67                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce68                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce69                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce7                        |   9|          2|    1|          2|
+    |cipher_0_2_344_ce70                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce71                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce72                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce73                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce74                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce75                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce76                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce77                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce78                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce79                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce8                        |   9|          2|    1|          2|
+    |cipher_0_2_344_ce80                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce81                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce82                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce83                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce84                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce85                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce86                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce87                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce88                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce89                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce9                        |   9|          2|    1|          2|
+    |cipher_0_2_344_ce90                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce91                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce92                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce93                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce94                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce95                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce96                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce97                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce98                       |   9|          2|    1|          2|
+    |cipher_0_2_344_ce99                       |   9|          2|    1|          2|
+    |cipherkey_blk_n                           |   9|          2|    1|          2|
+    |ciphertext_blk_n                          |   9|          2|    1|          2|
+    |ciphertext_e_blk_n                        |   9|          2|    1|          2|
+    |e_3_reg_189                               |   9|          2|    1|          2|
+    |input_block_V_4_reg_166                   |   9|          2|  128|        256|
+    |plaintext_blk_n                           |   9|          2|    1|          2|
+    |plaintext_e_blk_n                         |   9|          2|    1|          2|
+    |plaintext_e_din                           |  14|          3|    1|          3|
+    +------------------------------------------+----+-----------+-----+-----------+
+    |Total                                     |1673|        370|  461|        962|
+    +------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------+-----+----+-----+-----------+
+    |                Name               |  FF | LUT| Bits| Const Bits|
+    +-----------------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                          |    4|   0|    4|          0|
+    |ap_enable_reg_pp0_iter0            |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1            |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter11           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter12           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter13           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter14           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter15           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter16           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter17           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter18           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter19           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2            |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter20           |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3            |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4            |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5            |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6            |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7            |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8            |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9            |    1|   0|    1|          0|
+    |cipher_key_list_V_0_reg_688        |  128|   0|  128|          0|
+    |cipher_key_list_V_10_reg_738       |  128|   0|  128|          0|
+    |cipher_key_list_V_1_reg_693        |  128|   0|  128|          0|
+    |cipher_key_list_V_2_reg_698        |  128|   0|  128|          0|
+    |cipher_key_list_V_3_reg_703        |  128|   0|  128|          0|
+    |cipher_key_list_V_4_reg_708        |  128|   0|  128|          0|
+    |cipher_key_list_V_5_reg_713        |  128|   0|  128|          0|
+    |cipher_key_list_V_6_reg_718        |  128|   0|  128|          0|
+    |cipher_key_list_V_7_reg_723        |  128|   0|  128|          0|
+    |cipher_key_list_V_8_reg_728        |  128|   0|  128|          0|
+    |cipher_key_list_V_9_reg_733        |  128|   0|  128|          0|
+    |e_3_reg_189                        |    1|   0|    1|          0|
+    |grp_process_r_fu_199_ap_start_reg  |    1|   0|    1|          0|
+    |grp_updateKey_fu_219_ap_start_reg  |    1|   0|    1|          0|
+    |initialization_reg_177             |    1|   0|    1|          0|
+    |input_block_V_3_reg_743            |  128|   0|  128|          0|
+    |input_block_V_4_reg_166            |  128|   0|  128|          0|
+    |tmp_49_reg_678                     |  128|   0|  128|          0|
+    |tmp_50_reg_683                     |    1|   0|    1|          0|
+    |tmp_52_reg_749                     |    1|   0|    1|          0|
+    |tmp_reg_673                        |  128|   0|  128|          0|
+    |e_3_reg_189                        |   64|  32|    1|          0|
+    +-----------------------------------+-----+----+-----+-----------+
+    |Total                              | 2015|  32| 1952|          0|
+    +-----------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+---------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++----------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  aesCtrDecrypt<128u>|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  aesCtrDecrypt<128u>|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  aesCtrDecrypt<128u>|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  aesCtrDecrypt<128u>|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  aesCtrDecrypt<128u>|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  aesCtrDecrypt<128u>|  return value|
+|ciphertext_dout       |   in|  128|     ap_fifo|           ciphertext|       pointer|
+|ciphertext_empty_n    |   in|    1|     ap_fifo|           ciphertext|       pointer|
+|ciphertext_read       |  out|    1|     ap_fifo|           ciphertext|       pointer|
+|ciphertext_e_dout     |   in|    1|     ap_fifo|         ciphertext_e|       pointer|
+|ciphertext_e_empty_n  |   in|    1|     ap_fifo|         ciphertext_e|       pointer|
+|ciphertext_e_read     |  out|    1|     ap_fifo|         ciphertext_e|       pointer|
+|cipherkey_dout        |   in|  128|     ap_fifo|            cipherkey|       pointer|
+|cipherkey_empty_n     |   in|    1|     ap_fifo|            cipherkey|       pointer|
+|cipherkey_read        |  out|    1|     ap_fifo|            cipherkey|       pointer|
+|IV_strm_dout          |   in|  128|     ap_fifo|              IV_strm|       pointer|
+|IV_strm_empty_n       |   in|    1|     ap_fifo|              IV_strm|       pointer|
+|IV_strm_read          |  out|    1|     ap_fifo|              IV_strm|       pointer|
+|plaintext_din         |  out|  128|     ap_fifo|            plaintext|       pointer|
+|plaintext_full_n      |   in|    1|     ap_fifo|            plaintext|       pointer|
+|plaintext_write       |  out|    1|     ap_fifo|            plaintext|       pointer|
+|plaintext_e_din       |  out|    1|     ap_fifo|          plaintext_e|       pointer|
+|plaintext_e_full_n    |   in|    1|     ap_fifo|          plaintext_e|       pointer|
+|plaintext_e_write     |  out|    1|     ap_fifo|          plaintext_e|       pointer|
++----------------------+-----+-----+------------+---------------------+--------------+
+

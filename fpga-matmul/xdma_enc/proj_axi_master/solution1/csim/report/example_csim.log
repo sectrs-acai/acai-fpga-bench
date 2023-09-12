@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../example_test.cpp in debug mode
+gcc: error: unrecognized command line option ‘--stack,10485760’
+gcc: error: unrecognized command line option ‘--stack,10485760’
+gcc: error: unrecognized command line option ‘--stack,10485760’
+make: *** [csim.mk:78: obj/example_test.o] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

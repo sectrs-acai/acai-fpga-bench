@@ -1,0 +1,361 @@
+
+
+================================================================
+== Vitis HLS Report for 'dec'
+================================================================
+* Date:           Tue Apr 18 19:58:28 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        proj_axi_master
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.769 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                             |                                  |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                   Instance                  |              Module              |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +---------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_dec_Pipeline_VITIS_LOOP_102_3_fu_192     |dec_Pipeline_VITIS_LOOP_102_3     |      130|      130|  1.300 us|  1.300 us|  130|  130|       no|
+        |grp_updateKey_fu_200                         |updateKey                         |       12|       12|  0.120 us|  0.120 us|   12|   12|       no|
+        |grp_dec_Pipeline_decryption_ctr_loop_fu_221  |dec_Pipeline_decryption_ctr_loop  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        |grp_dec_Pipeline_VITIS_LOOP_113_4_fu_246     |dec_Pipeline_VITIS_LOOP_113_4     |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +---------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        4|    -|
+|FIFO                 |        8|     -|     1110|      684|    -|
+|Instance             |        0|     -|     2999|    10540|    -|
+|Memory               |        -|     -|      640|     2640|    -|
+|Multiplexer          |        -|     -|        -|     1691|    -|
+|Register             |        -|     -|     1682|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        8|     0|     6431|    15559|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1440|  2280|   788160|   394080|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|     0|       ~0|        3|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4320|  6840|  2364480|  1182240|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|     0|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------+----------------------------------+---------+----+------+-------+-----+
+    |                   Instance                  |              Module              | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +---------------------------------------------+----------------------------------+---------+----+------+-------+-----+
+    |grp_dec_Pipeline_VITIS_LOOP_102_3_fu_192     |dec_Pipeline_VITIS_LOOP_102_3     |        0|   0|    11|     86|    0|
+    |grp_dec_Pipeline_VITIS_LOOP_113_4_fu_246     |dec_Pipeline_VITIS_LOOP_113_4     |        0|   0|    77|    151|    0|
+    |grp_dec_Pipeline_decryption_ctr_loop_fu_221  |dec_Pipeline_decryption_ctr_loop  |        0|   0|  2539|  10069|    0|
+    |grp_updateKey_fu_200                         |updateKey                         |        0|   0|   372|    234|    0|
+    +---------------------------------------------+----------------------------------+---------+----+------+-------+-----+
+    |Total                                        |                                  |        0|   0|  2999|  10540|    0|
+    +---------------------------------------------+----------------------------------+---------+----+------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------------+-----------------------------------------+---------+-----+------+-----+------+-----+------+-------------+
+    |        Memory        |                  Module                 | BRAM_18K|  FF |  LUT | URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------------+-----------------------------------------+---------+-----+------+-----+------+-----+------+-------------+
+    |cipher_0_ssbox_190_U  |dec_cipher_0_ssbox_190_ROM_NP_LUTRAM_1R  |        0|  640|  2640|    0|   256|    8|     1|         2048|
+    +----------------------+-----------------------------------------+---------+-----+------+-----+------+-----+------+-------------+
+    |Total                 |                                         |        0|  640|  2640|    0|   256|    8|     1|         2048|
+    +----------------------+-----------------------------------------+---------+-----+------+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    +--------------------------+---------+-----+----+-----+------+-----+---------+
+    |           Name           | BRAM_18K|  FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +--------------------------+---------+-----+----+-----+------+-----+---------+
+    |IVStrm_fifo_U             |        0|  260|   0|    -|     2|  128|      256|
+    |cipherkeyStrm_fifo_U      |        0|  260|   0|    -|     2|  128|      256|
+    |ciphertextStrm_fifo_U     |        4|  284|   0|    -|   256|  128|    32768|
+    |endCiphertextStrm_fifo_U  |        0|   11|   0|    -|   256|    1|      256|
+    |endPlaintextStrm_fifo_U   |        0|   11|   0|    -|   256|    1|      256|
+    |plaintextStrm_fifo_U      |        4|  284|   0|    -|   256|  128|    32768|
+    +--------------------------+---------+-----+----+-----+------+-----+---------+
+    |Total                     |        8| 1110|   0|    0|  1028|  514|    66560|
+    +--------------------------+---------+-----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    |ap_block_state5  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   4|           2|           2|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  65|         13|    1|         13|
+    |cipher_0_ssbox_190_address0  |  14|          3|    8|         24|
+    |cipher_0_ssbox_190_address1  |  14|          3|    8|         24|
+    |cipher_0_ssbox_190_address2  |  14|          3|    8|         24|
+    |cipher_0_ssbox_190_address3  |  14|          3|    8|         24|
+    |cipher_0_ssbox_190_ce0       |  14|          3|    1|          3|
+    |cipher_0_ssbox_190_ce1       |  14|          3|    1|          3|
+    |cipher_0_ssbox_190_ce10      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce100     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce101     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce102     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce103     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce104     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce105     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce106     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce107     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce108     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce109     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce11      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce110     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce111     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce112     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce113     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce114     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce115     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce116     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce117     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce118     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce119     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce12      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce120     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce121     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce122     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce123     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce124     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce125     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce126     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce127     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce128     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce129     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce13      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce130     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce131     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce132     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce133     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce134     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce135     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce136     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce137     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce138     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce139     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce14      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce140     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce141     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce142     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce143     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce144     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce145     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce146     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce147     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce148     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce149     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce15      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce150     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce151     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce152     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce153     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce154     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce155     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce156     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce157     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce158     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce159     |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce16      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce17      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce18      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce19      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce2       |  14|          3|    1|          3|
+    |cipher_0_ssbox_190_ce20      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce21      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce22      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce23      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce24      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce25      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce26      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce27      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce28      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce29      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce3       |  14|          3|    1|          3|
+    |cipher_0_ssbox_190_ce30      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce31      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce32      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce33      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce34      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce35      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce36      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce37      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce38      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce39      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce4       |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce40      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce41      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce42      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce43      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce44      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce45      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce46      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce47      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce48      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce49      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce5       |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce50      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce51      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce52      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce53      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce54      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce55      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce56      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce57      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce58      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce59      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce6       |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce60      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce61      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce62      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce63      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce64      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce65      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce66      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce67      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce68      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce69      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce7       |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce70      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce71      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce72      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce73      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce74      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce75      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce76      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce77      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce78      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce79      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce8       |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce80      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce81      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce82      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce83      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce84      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce85      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce86      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce87      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce88      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce89      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce9       |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce90      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce91      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce92      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce93      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce94      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce95      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce96      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce97      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce98      |   9|          2|    1|          2|
+    |cipher_0_ssbox_190_ce99      |   9|          2|    1|          2|
+    |ciphertextStrm_read          |   9|          2|    1|          2|
+    |ciphertextStrm_write         |   9|          2|    1|          2|
+    |endCiphertextStrm_din        |   9|          2|    1|          2|
+    |endCiphertextStrm_read       |  14|          3|    1|          3|
+    |endCiphertextStrm_write      |  14|          3|    1|          3|
+    |endPlaintextStrm_din         |   9|          2|    1|          2|
+    |endPlaintextStrm_read        |  14|          3|    1|          3|
+    |endPlaintextStrm_write       |  14|          3|    1|          3|
+    |plaintextStrm_read           |   9|          2|    1|          2|
+    |plaintextStrm_write          |   9|          2|    1|          2|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        |1691|        373|  203|        457|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------+-----+----+-----+-----------+
+    |                           Name                           |  FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------+-----+----+-----+-----------+
+    |IV_reg_410                                                |  128|   0|  128|          0|
+    |ap_CS_fsm                                                 |   12|   0|   12|          0|
+    |cipher_key_list_V_11_fu_104                               |  128|   0|  128|          0|
+    |cipher_key_list_V_12_fu_108                               |  128|   0|  128|          0|
+    |cipher_key_list_V_13_fu_112                               |  128|   0|  128|          0|
+    |cipher_key_list_V_14_fu_116                               |  128|   0|  128|          0|
+    |cipher_key_list_V_15_fu_120                               |  128|   0|  128|          0|
+    |cipher_key_list_V_16_fu_124                               |  128|   0|  128|          0|
+    |cipher_key_list_V_17_fu_128                               |  128|   0|  128|          0|
+    |cipher_key_list_V_18_fu_132                               |  128|   0|  128|          0|
+    |cipher_key_list_V_19_fu_136                               |  128|   0|  128|          0|
+    |cipher_key_list_V_20_fu_140                               |  128|   0|  128|          0|
+    |cipher_key_list_V_fu_100                                  |  128|   0|  128|          0|
+    |e_reg_415                                                 |    1|   0|    1|          0|
+    |end_reg_453                                               |    1|   0|    1|          0|
+    |grp_dec_Pipeline_VITIS_LOOP_102_3_fu_192_ap_start_reg     |    1|   0|    1|          0|
+    |grp_dec_Pipeline_VITIS_LOOP_113_4_fu_246_ap_start_reg     |    1|   0|    1|          0|
+    |grp_dec_Pipeline_decryption_ctr_loop_fu_221_ap_start_reg  |    1|   0|    1|          0|
+    |grp_updateKey_fu_200_ap_start_reg                         |    1|   0|    1|          0|
+    |key_r_reg_405                                             |  128|   0|  128|          0|
+    +----------------------------------------------------------+-----+----+-----+-----------+
+    |Total                                                     | 1682|   0| 1682|          0|
+    +----------------------------------------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|           dec|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|           dec|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|           dec|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|           dec|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|           dec|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|           dec|  return value|
+|crypto_buff_address0  |  out|    7|   ap_memory|   crypto_buff|         array|
+|crypto_buff_ce0       |  out|    1|   ap_memory|   crypto_buff|         array|
+|crypto_buff_q0        |   in|  128|   ap_memory|   crypto_buff|         array|
+|pt_address0           |  out|    7|   ap_memory|            pt|         array|
+|pt_ce0                |  out|    1|   ap_memory|            pt|         array|
+|pt_we0                |  out|    1|   ap_memory|            pt|         array|
+|pt_d0                 |  out|  128|   ap_memory|            pt|         array|
++----------------------+-----+-----+------------+--------------+--------------+
+

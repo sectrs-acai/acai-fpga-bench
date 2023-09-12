@@ -1,0 +1,49 @@
+INFO: [HLS 200-10] Running '/home/ubuntu/xilinx_install_new/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ubuntu' on host '192.33.93.235' (Linux_x86_64 version 5.8.0-63-generic) on Wed Apr 26 21:18:43 CEST 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/ubuntu/arm-cca/gitlab/fpga/xdma_enc'
+Sourcing Tcl script '/home/ubuntu/arm-cca/gitlab/fpga/xdma_enc/proj_axi_master/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source /home/ubuntu/arm-cca/gitlab/fpga/xdma_enc/proj_axi_master/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project proj_axi_master 
+INFO: [HLS 200-10] Opening project '/home/ubuntu/arm-cca/gitlab/fpga/xdma_enc/proj_axi_master'.
+INFO: [HLS 200-1510] Running: set_top example 
+INFO: [HLS 200-1510] Running: add_files enc_dec.hpp 
+INFO: [HLS 200-10] Adding design file 'enc_dec.hpp' to the project
+INFO: [HLS 200-1510] Running: add_files example.cpp -cflags -I/home/ubuntu/git/Vitis_Libraries/security/L1/include -csimflags -I/home/ubuntu/git/Vitis_Libraries/security/L1/include 
+INFO: [HLS 200-10] Adding design file 'example.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb example_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'example_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/ubuntu/arm-cca/gitlab/fpga/xdma_enc/proj_axi_master/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flga2104-2-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -description {encrypt xdma with 2500 blocks}
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=add_100
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/ubuntu/vitis-hls-ip-2022/xdma_enc.zip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -version=2.0
+INFO: [HLS 200-1510] Running: set_part xcvu9p-flga2104-2-i 
+INFO: [HLS 200-1510] Running: create_clock -period 100MHz -name default 
+INFO: [HLS 200-1510] Running: config_export -description encrypt xdma with 2500 blocks -display_name add_100 -format ip_catalog -output /home/ubuntu/vitis-hls-ip-2022/xdma_enc.zip -rtl verilog -version 2.0 
+INFO: [HLS 200-1510] Running: source ./proj_axi_master/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name example example 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog -output /home/ubuntu/vitis-hls-ip-2022/xdma_enc.zip 
+Running Dispatch Server on port: 42959
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/ubuntu/xilinx_install_new/Vivado/2022.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 26 21:19:05 2023...
+INFO: [HLS 200-802] Generated output file /home/ubuntu/vitis-hls-ip-2022/xdma_enc.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 10.5 seconds. CPU system time: 0.84 seconds. Elapsed time: 13.44 seconds; current allocated memory: 8.496 MB.
+INFO: [HLS 200-112] Total CPU user time: 12.59 seconds. Total CPU system time: 1.23 seconds. Total elapsed time: 25.79 seconds; peak allocated memory: 765.699 MB.

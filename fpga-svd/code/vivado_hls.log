@@ -1,0 +1,79 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2015.4
+  Build 1412921 on Wed Nov 18 09:58:55 AM 2015
+  Copyright (C) 2015 Xilinx Inc. All rights reserved.
+================================================================
+@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2015.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'ubuntu' on host '192.33.93.235' (Linux_x86_64 version 5.8.0-63-generic) on Wed Sep 28 17:55:46 CEST 2022
+            in directory '/home/ubuntu/git/HLS-Linear-Algebra-SVD/code'
+@I [HLS-10] Opening project '/home/ubuntu/git/HLS-Linear-Algebra-SVD/code/SVD'.
+@I [HLS-10] Adding design file 'svd.cpp' to the project
+@I [HLS-10] Adding design file 'svd.h' to the project
+@I [HLS-10] Adding test bench file 'svd_tb.cpp' to the project
+@I [HLS-10] Opening solution '/home/ubuntu/git/HLS-Linear-Algebra-SVD/code/SVD/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Setting target device to 'xc7z020clg400-1'
+   Compiling ../../../../svd_tb.cpp in debug mode
+In file included from /opt/Xilinx/Vivado_HLS/2015.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/features.h:339:0,
+                 from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdio.h:27,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/etc/ap_int_sim.h:75,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/ap_int.h:74,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/ap_fixed.h:67,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/hls/linear_algebra/hls_matrix_multiply.h:61,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/hls_linear_algebra.h:43,
+                 from ../../../../svd.h:36,
+                 from ../../../../svd_tb.cpp:33:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:492:49: error: missing binary operator before token "("
+In file included from /usr/include/stdio.h:27:0,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/etc/ap_int_sim.h:75,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/ap_int.h:74,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/ap_fixed.h:67,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/hls/linear_algebra/hls_matrix_multiply.h:61,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/hls_linear_algebra.h:43,
+                 from ../../../../svd.h:36,
+                 from ../../../../svd_tb.cpp:33:
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:56:17: error: missing binary operator before token "("
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:73:17: error: missing binary operator before token "("
+In file included from /opt/Xilinx/Vivado_HLS/2015.4/include/etc/ap_int_sim.h:75:0,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/ap_int.h:74,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/ap_fixed.h:67,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/hls/linear_algebra/hls_matrix_multiply.h:61,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/hls_linear_algebra.h:43,
+                 from ../../../../svd.h:36,
+                 from ../../../../svd_tb.cpp:33:
+/usr/include/stdio.h:290:43: error: missing binary operator before token "("
+/usr/include/stdio.h:363:17: error: missing binary operator before token "("
+/usr/include/stdio.h:405:18: error: missing binary operator before token "("
+/usr/include/stdio.h:449:19: error: missing binary operator before token "("
+/usr/include/stdio.h:567:17: error: missing binary operator before token "("
+/usr/include/stdio.h:592:43: error: missing binary operator before token "("
+In file included from /opt/Xilinx/Vivado_HLS/2015.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cwchar:46:0,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/postypes.h:42,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iosfwd:42,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ios:39,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/ostream:40,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/iostream:40,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/etc/ap_int_sim.h:76,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/ap_int.h:74,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/ap_fixed.h:67,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/hls/linear_algebra/hls_matrix_multiply.h:61,
+                 from /opt/Xilinx/Vivado_HLS/2015.4/include/hls_linear_algebra.h:43,
+                 from ../../../../svd.h:36,
+                 from ../../../../svd_tb.cpp:33:
+/opt/Xilinx/Vivado_HLS/2015.4/lnx64/tools/gcc/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.6.3/include-fixed/wchar.h:175:22: fatal error: xlocale.h: No such file or directory
+compilation terminated.
+make: *** [csim.mk:75: obj/svd_tb.o] Error 1
+@E [SIM-1] 'csim_design' failed: compilation error(s).
+4
+    while executing
+"source script.tcl"
+    invoked from within
+"hls::main script.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

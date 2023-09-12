@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="proj_axi_master" solutionName="solution1" date="2023-04-26T21:15:14.169+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'example_Pipeline_3/m_axi_gmem_BREADY' to 0." projectName="proj_axi_master" solutionName="solution1" date="2023-04-26T21:15:14.101+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'example_Pipeline_3/m_axi_gmem_AWUSER' to 0." projectName="proj_axi_master" solutionName="solution1" date="2023-04-26T21:15:14.098+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'example_Pipeline_3/m_axi_gmem_AWREGION' to 0." projectName="proj_axi_master" solutionName="solution1" date="2023-04-26T21:15:14.097+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'example_Pipeline_3/m_axi_gmem_AWQOS' to 0." projectName="proj_axi_master" solutionName="solution1" date="2023-04-26T21:15:14.096+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'example_Pipeline_3/m_axi_gmem_AWPROT' to 0." projectName="proj_axi_master" solutionName="solution1" date="2023-04-26T21:15:14.095+0200" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,26 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../example_test.cpp in debug mode
+   Compiling ../../../../example.cpp in debug mode
+   Generating csim.exe
+HLS AXI-Stream no side-channel data example
+
+cipherkey = 0x706F6E6D6C6B6A696867666564636261
+initialization_vector = 0x706F6E6D6C6B6A696867666564636261
+
+ciphertext    = 0x07F679583C5400000000000002000
+input_block  = 0x706F6E6D6C6B6A696867666564636261
+output_block = 0xEFAA5777507CC1AE028DA799AF2913A9
+plaintext   = 0xEFAA2810C5FF04EE028DA799AF2933A9
+
+cipherkey = 0x706F6E6D6C6B6A696867666564636261
+initialization_vector = 0x706F6E6D6C6B6A696867666564636261
+
+plaintext    = 0x07F679583C5400000000000002000
+input_block  = 0x706F6E6D6C6B6A696867666564636261
+output_block = 0xEFAA5777507CC1AE028DA799AF2913A9
+ciphertext   = 0xEFAA2810C5FF04EE028DA799AF2933A9
+Success HW and SW results match
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 2
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

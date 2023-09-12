@@ -1,0 +1,29 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2015.4
+  Build 1412921 on Wed Nov 18 09:58:55 AM 2015
+  Copyright (C) 2015 Xilinx Inc. All rights reserved.
+================================================================
+@I [HLS-10] Running '/opt/Xilinx/Vivado_HLS/2015.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'ubuntu' on host '192.33.93.235' (Linux_x86_64 version 5.8.0-63-generic) on Wed Sep 28 17:53:24 CEST 2022
+            in directory '/home/ubuntu/git/HLS-Linear-Algebra-SVD'
+@I [HLS-10] Creating and opening project '/home/ubuntu/git/HLS-Linear-Algebra-SVD/SVD'.
+@W [HLS-40] Cannot find design file 'svd.cpp'
+@W [HLS-40] Cannot find design file 'svd.h'
+@W [HLS-40] Cannot find test bench file 'svd_tb.cpp'
+@I [HLS-10] Creating and opening solution '/home/ubuntu/git/HLS-Linear-Algebra-SVD/SVD/solution1'.
+@I [HLS-10] Setting target device to 'xc7z020clg400-1'
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@E [SIM-50] Cannot find C test bench. Please specify test bench files using 'add_files -tb'.
+@E [SIM-1] CSim failed with errors.
+4
+    while executing
+"source script/script.tcl"
+    invoked from within
+"hls::main script/script.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
