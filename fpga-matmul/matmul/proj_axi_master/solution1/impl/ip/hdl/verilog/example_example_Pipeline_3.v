@@ -122,7 +122,7 @@ input  [1:0] m_axi_gmem_BRESP;
 input  [0:0] m_axi_gmem_BID;
 input  [0:0] m_axi_gmem_BUSER;
 input  [61:0] sext_ln60;
-output  [17:0] res_address0;
+output  [13:0] res_address0;
 output   res_ce0;
 output   res_we0;
 output  [31:0] res_d0;
@@ -150,15 +150,15 @@ reg    ap_ready_int;
 reg    gmem_blk_n_R;
 wire    ap_block_pp0_stage0;
 reg    ap_block_pp0_stage0_11001;
-reg   [17:0] loop_index3_load_reg_127;
-reg   [17:0] loop_index3_load_reg_127_pp0_iter1_reg;
+reg   [13:0] loop_index3_load_reg_127;
+reg   [13:0] loop_index3_load_reg_127_pp0_iter1_reg;
 reg   [31:0] gmem_addr_read_reg_136;
 reg    ap_condition_exit_pp0_iter1_stage0;
 wire   [63:0] loop_index3_cast_fu_111_p1;
-reg   [17:0] loop_index3_fu_48;
-wire   [17:0] empty_18_fu_94_p2;
+reg   [13:0] loop_index3_fu_48;
+wire   [13:0] empty_18_fu_94_p2;
 wire    ap_loop_init;
-reg   [17:0] ap_sig_allocacmp_loop_index3_load;
+reg   [13:0] ap_sig_allocacmp_loop_index3_load;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -238,7 +238,7 @@ always @ (posedge ap_clk) begin
         if (((ap_enable_reg_pp0_iter0 == 1'b1) & (exitcond2011_fu_88_p2 == 1'd0))) begin
             loop_index3_fu_48 <= empty_18_fu_94_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            loop_index3_fu_48 <= 18'd0;
+            loop_index3_fu_48 <= 14'd0;
         end
     end
 end
@@ -308,7 +308,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_loop_index3_load = 18'd0;
+        ap_sig_allocacmp_loop_index3_load = 14'd0;
     end else begin
         ap_sig_allocacmp_loop_index3_load = loop_index3_fu_48;
     end
@@ -383,9 +383,9 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign empty_18_fu_94_p2 = (ap_sig_allocacmp_loop_index3_load + 18'd1);
+assign empty_18_fu_94_p2 = (ap_sig_allocacmp_loop_index3_load + 14'd1);
 
-assign exitcond2011_fu_88_p2 = ((ap_sig_allocacmp_loop_index3_load == 18'd250000) ? 1'b1 : 1'b0);
+assign exitcond2011_fu_88_p2 = ((ap_sig_allocacmp_loop_index3_load == 14'd10000) ? 1'b1 : 1'b0);
 
 assign loop_index3_cast_fu_111_p1 = loop_index3_load_reg_127_pp0_iter1_reg;
 

@@ -20,7 +20,9 @@ module example_dec_Pipeline_VITIS_LOOP_102_3 (
         endCiphertextStrm_din,
         endCiphertextStrm_full_n,
         endCiphertextStrm_write,
-        crypto_buff_load
+        crypto_buff_address0,
+        crypto_buff_ce0,
+        crypto_buff_q0
 );
 
 parameter    ap_ST_fsm_pp0_stage0 = 1'd1;
@@ -37,11 +39,14 @@ output   ciphertextStrm_write;
 output  [0:0] endCiphertextStrm_din;
 input   endCiphertextStrm_full_n;
 output   endCiphertextStrm_write;
-input  [127:0] crypto_buff_load;
+output  [6:0] crypto_buff_address0;
+output   crypto_buff_ce0;
+input  [127:0] crypto_buff_q0;
 
 reg ap_idle;
 reg ciphertextStrm_write;
 reg endCiphertextStrm_write;
+reg crypto_buff_ce0;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
 wire    ap_CS_fsm_pp0_stage0;
@@ -51,7 +56,7 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 reg    ap_block_state2_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln102_fu_77_p2;
+wire   [0:0] icmp_ln102_fu_87_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
@@ -59,10 +64,11 @@ reg    ciphertextStrm_blk_n;
 wire    ap_block_pp0_stage0;
 reg    endCiphertextStrm_blk_n;
 reg    ap_block_pp0_stage0_11001;
-reg   [11:0] i_fu_44;
-wire   [11:0] i_4_fu_83_p2;
+wire   [63:0] i_cast_fu_99_p1;
+reg   [7:0] i_fu_46;
+wire   [7:0] add_ln102_fu_93_p2;
 wire    ap_loop_init;
-reg   [11:0] ap_sig_allocacmp_i_3;
+reg   [7:0] ap_sig_allocacmp_i_2;
 reg    ap_block_pp0_stage0_01001;
 reg    ap_done_reg;
 wire    ap_continue_int;
@@ -128,16 +134,16 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln102_fu_77_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            i_fu_44 <= i_4_fu_83_p2;
+        if (((icmp_ln102_fu_87_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            i_fu_46 <= add_ln102_fu_93_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_44 <= 12'd0;
+            i_fu_46 <= 8'd0;
         end
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln102_fu_77_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln102_fu_87_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -178,9 +184,9 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_i_3 = 12'd0;
+        ap_sig_allocacmp_i_2 = 8'd0;
     end else begin
-        ap_sig_allocacmp_i_3 = i_fu_44;
+        ap_sig_allocacmp_i_2 = i_fu_46;
     end
 end
 
@@ -197,6 +203,14 @@ always @ (*) begin
         ciphertextStrm_write = 1'b1;
     end else begin
         ciphertextStrm_write = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        crypto_buff_ce0 = 1'b1;
+    end else begin
+        crypto_buff_ce0 = 1'b0;
     end
 end
 
@@ -227,6 +241,8 @@ always @ (*) begin
     endcase
 end
 
+assign add_ln102_fu_93_p2 = (ap_sig_allocacmp_i_2 + 8'd1);
+
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
@@ -255,12 +271,14 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign ciphertextStrm_din = crypto_buff_load;
+assign ciphertextStrm_din = crypto_buff_q0;
+
+assign crypto_buff_address0 = i_cast_fu_99_p1;
 
 assign endCiphertextStrm_din = 1'd0;
 
-assign i_4_fu_83_p2 = (ap_sig_allocacmp_i_3 + 12'd1);
+assign i_cast_fu_99_p1 = ap_sig_allocacmp_i_2;
 
-assign icmp_ln102_fu_77_p2 = ((ap_sig_allocacmp_i_3 == 12'd2500) ? 1'b1 : 1'b0);
+assign icmp_ln102_fu_87_p2 = ((ap_sig_allocacmp_i_2 == 8'd128) ? 1'b1 : 1'b0);
 
 endmodule //example_dec_Pipeline_VITIS_LOOP_102_3

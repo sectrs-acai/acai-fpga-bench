@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /home/ubuntu/arm-cca/gitlab/fpga/using_axi_master_offset_enc/proj_axi_master/solution1/./sim/autowrap/testbench/example.cpp_pre.cpp.tb.cpp

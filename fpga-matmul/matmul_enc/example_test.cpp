@@ -16,8 +16,8 @@
 
  #include <stdio.h>
 
-#define SIZE_R 100
-#define SIZE_C 100
+#define SIZE_R 500
+#define SIZE_C 500
 void example(volatile int *a, volatile int *b, volatile int *c, volatile int *crypto);
 
 int main()

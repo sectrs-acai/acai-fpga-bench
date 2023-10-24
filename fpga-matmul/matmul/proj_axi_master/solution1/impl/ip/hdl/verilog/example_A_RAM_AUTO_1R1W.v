@@ -13,8 +13,8 @@ module example_A_RAM_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 18;
-parameter AddressRange = 250000;
+parameter AddressWidth = 14;
+parameter AddressRange = 10000;
  
 input[AddressWidth-1:0] address0;
 input ce0;

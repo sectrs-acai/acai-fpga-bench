@@ -55,8 +55,8 @@ set Library     "hls"
 set IPName      "example"
 set Version     "2.0"
 set DisplayName "add_100"
-set Revision    "2112992765"
-set Description "matmul with saxi offset 500 by 500"
+set Revision    "2112996861"
+set Description "matmul with saxi offset 100 by 100"
 set Device      "virtexuplus"
 set AutoFamily  ""
 set Taxonomy    "/VITIS_HLS_IP"
@@ -69,15 +69,15 @@ set xo_kernel_name "example"
 set xo_kernel_files {}
 set enable_xo_gen false
 set kernel_xml [file join [pwd] ../kernel/kernel.xml]
-set solution_dir "/home/ubuntu/arm-cca/gitlab/fpga/matmul/proj_axi_master/solution1"
-set debug_dir "/home/ubuntu/arm-cca/gitlab/fpga/matmul/proj_axi_master/solution1/.debug"
+set solution_dir "/home/ubuntu/arm-cca/gitlab/fpga/matmul_100/proj_axi_master/solution1"
+set debug_dir "/home/ubuntu/arm-cca/gitlab/fpga/matmul_100/proj_axi_master/solution1/.debug"
 set xo_hls_files_dir ""
 set hdl_module_list {example_flow_control_loop_pipe_sequential_init
 example_flow_control_loop_pipe_sequential_init
 example_flow_control_loop_pipe_sequential_init
-example_mul_9ns_10ns_18_1_1
+example_mul_7ns_8ns_14_1_1
 example_mul_32s_32s_32_1_1
-example_mac_muladd_9ns_9ns_9ns_18_4_1
+example_mac_muladd_7ns_7ns_7ns_14_4_1
 example_flow_control_loop_pipe_sequential_init
 example_flow_control_loop_pipe_sequential_init
 example_A_RAM_AUTO_1R1W
@@ -1948,7 +1948,7 @@ if {![regexp -nocase {2014\.3.*} $vivado_ver match]} {
 ipx::create_xgui_files -logo_file misc/logo.png $core
 
 ## System Info
-set user_parameters_list {clk_period 5 machine 64 combinational 0 latency 126000055 II x}
+set user_parameters_list {clk_period 5 machine 64 combinational 0 latency 1040055 II x}
 foreach {user_para value} $user_parameters_list {
     incr user_parameter_order
     set user_para_value [ipx::add_user_parameter $user_para $core]

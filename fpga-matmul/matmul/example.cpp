@@ -2,8 +2,8 @@
 #include <string.h>
 
 #define MAX_SIZE 250000
-#define MAX_ROW_SIZE 500
-#define MAX_COL_SIZE 500
+#define MAX_ROW_SIZE 100
+#define MAX_COL_SIZE 100
 
 
 template <bool transA,

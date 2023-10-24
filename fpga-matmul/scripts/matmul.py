@@ -1,10 +1,3 @@
-#Works for matmul in /home/ubuntu/arm-cca/gitlab/fpga/matmul
-#The corresponding vivado project is /home/ubuntu/Xilinx/Vivado2022/matmul
-#The bitstream that works is in /home/ubuntu/Xilinx/Vivado2022/matmul/example_memory_working_matmul.runs for matrices of size 500x500 
-#IP in /home/ubuntu/vitis-hls-ip-2022/matmul_100.zip for 100x100 and 
-#bitstream in /home/ubuntu/Xilinx/Vivado2022/matmul_100/example_memory.runs/impl_1/design_1_wrapper.bit
-#The saxi offsets are in ./axi_offsets/matmul.png
-
 import os
 import numpy as np 
 from ctypes import *

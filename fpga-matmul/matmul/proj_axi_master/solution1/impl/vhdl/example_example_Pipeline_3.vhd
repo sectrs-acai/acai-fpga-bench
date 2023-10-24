@@ -64,7 +64,7 @@ port (
     m_axi_gmem_BID : IN STD_LOGIC_VECTOR (0 downto 0);
     m_axi_gmem_BUSER : IN STD_LOGIC_VECTOR (0 downto 0);
     sext_ln60 : IN STD_LOGIC_VECTOR (61 downto 0);
-    res_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
+    res_address0 : OUT STD_LOGIC_VECTOR (13 downto 0);
     res_ce0 : OUT STD_LOGIC;
     res_we0 : OUT STD_LOGIC;
     res_d0 : OUT STD_LOGIC_VECTOR (31 downto 0) );
@@ -84,9 +84,9 @@ architecture behav of example_example_Pipeline_3 is
     constant ap_const_lv3_0 : STD_LOGIC_VECTOR (2 downto 0) := "000";
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
-    constant ap_const_lv18_0 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000000000";
-    constant ap_const_lv18_3D090 : STD_LOGIC_VECTOR (17 downto 0) := "111101000010010000";
-    constant ap_const_lv18_1 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000000001";
+    constant ap_const_lv14_0 : STD_LOGIC_VECTOR (13 downto 0) := "00000000000000";
+    constant ap_const_lv14_2710 : STD_LOGIC_VECTOR (13 downto 0) := "10011100010000";
+    constant ap_const_lv14_1 : STD_LOGIC_VECTOR (13 downto 0) := "00000000000001";
 
 attribute shreg_extract : string;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (0 downto 0) := "1";
@@ -110,15 +110,15 @@ attribute shreg_extract : string;
     signal gmem_blk_n_R : STD_LOGIC;
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
-    signal loop_index3_load_reg_127 : STD_LOGIC_VECTOR (17 downto 0);
-    signal loop_index3_load_reg_127_pp0_iter1_reg : STD_LOGIC_VECTOR (17 downto 0);
+    signal loop_index3_load_reg_127 : STD_LOGIC_VECTOR (13 downto 0);
+    signal loop_index3_load_reg_127_pp0_iter1_reg : STD_LOGIC_VECTOR (13 downto 0);
     signal gmem_addr_read_reg_136 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_condition_exit_pp0_iter1_stage0 : STD_LOGIC;
     signal loop_index3_cast_fu_111_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal loop_index3_fu_48 : STD_LOGIC_VECTOR (17 downto 0);
-    signal empty_18_fu_94_p2 : STD_LOGIC_VECTOR (17 downto 0);
+    signal loop_index3_fu_48 : STD_LOGIC_VECTOR (13 downto 0);
+    signal empty_18_fu_94_p2 : STD_LOGIC_VECTOR (13 downto 0);
     signal ap_loop_init : STD_LOGIC;
-    signal ap_sig_allocacmp_loop_index3_load : STD_LOGIC_VECTOR (17 downto 0);
+    signal ap_sig_allocacmp_loop_index3_load : STD_LOGIC_VECTOR (13 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -231,7 +231,7 @@ begin
                 if (((ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (exitcond2011_fu_88_p2 = ap_const_lv1_0))) then 
                     loop_index3_fu_48 <= empty_18_fu_94_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
-                    loop_index3_fu_48 <= ap_const_lv18_0;
+                    loop_index3_fu_48 <= ap_const_lv14_0;
                 end if;
             end if; 
         end if;
@@ -354,14 +354,14 @@ begin
     ap_sig_allocacmp_loop_index3_load_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0, loop_index3_fu_48, ap_loop_init)
     begin
         if (((ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_loop_init = ap_const_logic_1))) then 
-            ap_sig_allocacmp_loop_index3_load <= ap_const_lv18_0;
+            ap_sig_allocacmp_loop_index3_load <= ap_const_lv14_0;
         else 
             ap_sig_allocacmp_loop_index3_load <= loop_index3_fu_48;
         end if; 
     end process;
 
-    empty_18_fu_94_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_loop_index3_load) + unsigned(ap_const_lv18_1));
-    exitcond2011_fu_88_p2 <= "1" when (ap_sig_allocacmp_loop_index3_load = ap_const_lv18_3D090) else "0";
+    empty_18_fu_94_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_loop_index3_load) + unsigned(ap_const_lv14_1));
+    exitcond2011_fu_88_p2 <= "1" when (ap_sig_allocacmp_loop_index3_load = ap_const_lv14_2710) else "0";
 
     gmem_blk_n_R_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, m_axi_gmem_RVALID, exitcond2011_reg_132, ap_block_pp0_stage0)
     begin
@@ -414,7 +414,7 @@ begin
     m_axi_gmem_WSTRB <= ap_const_lv4_0;
     m_axi_gmem_WUSER <= ap_const_lv1_0;
     m_axi_gmem_WVALID <= ap_const_logic_0;
-    res_address0 <= loop_index3_cast_fu_111_p1(18 - 1 downto 0);
+    res_address0 <= loop_index3_cast_fu_111_p1(14 - 1 downto 0);
 
     res_ce0_assign_proc : process(ap_enable_reg_pp0_iter2, ap_block_pp0_stage0_11001)
     begin

@@ -1,7 +1,3 @@
-#Works for matmul in /home/ubuntu/arm-cca/gitlab/fpga/matmul_enc_copy with RTL in /home/ubuntu/vitis-hls-ip-2022/matmul_enc_copy_buf0_large100.zip
-#The corresponding vivado project is /home/ubuntu/Xilinx/Vivado2022/matmul_enc_copy
-#The bitstream that works is in /home/ubuntu/Xilinx/Vivado2022/matmul_enc_copy/example_memory.runs/impl_1/design_1_wrapper.bit
-#The saxi offsets are in ./axi_offsets/matmul_enc.png
 
 import os
 import numpy as np 

@@ -19,22 +19,22 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>126000055</Best-caseLatency>
-            <Average-caseLatency>126000055</Average-caseLatency>
-            <Worst-caseLatency>126000055</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.630 sec</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.630 sec</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.630 sec</Worst-caseRealTimeLatency>
-            <Interval-min>126000056</Interval-min>
-            <Interval-max>126000056</Interval-max>
+            <Best-caseLatency>1040055</Best-caseLatency>
+            <Average-caseLatency>1040055</Average-caseLatency>
+            <Worst-caseLatency>1040055</Worst-caseLatency>
+            <Best-caseRealTimeLatency>5.200 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>5.200 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>5.200 ms</Worst-caseRealTimeLatency>
+            <Interval-min>1040056</Interval-min>
+            <Interval-max>1040056</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>48</BRAM_18K>
             <DSP>4</DSP>
-            <FF>2100</FF>
-            <LUT>3009</LUT>
+            <FF>2031</FF>
+            <LUT>2924</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -812,38 +812,38 @@
             <ModuleName>example</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_example_Pipeline_1_fu_125</InstName>
+                    <InstName>grp_example_Pipeline_1_fu_127</InstName>
                     <ModuleName>example_Pipeline_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>125</ID>
+                    <ID>127</ID>
                     <BindInstances>empty_20_fu_94_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_example_Pipeline_2_fu_133</InstName>
+                    <InstName>grp_example_Pipeline_2_fu_135</InstName>
                     <ModuleName>example_Pipeline_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>133</ID>
+                    <ID>135</ID>
                     <BindInstances>empty_19_fu_94_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_example_Pipeline_3_fu_141</InstName>
+                    <InstName>grp_example_Pipeline_3_fu_143</InstName>
                     <ModuleName>example_Pipeline_3</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>141</ID>
+                    <ID>143</ID>
                     <BindInstances>empty_18_fu_94_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_example_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3_fu_149</InstName>
+                    <InstName>grp_example_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3_fu_151</InstName>
                     <ModuleName>example_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>149</ID>
-                    <BindInstances>add_ln27_1_fu_157_p2 add_ln27_fu_255_p2 mul_9ns_10ns_18_1_1_U10 add_ln28_fu_285_p2 add_ln36_fu_302_p2 add_ln31_fu_308_p2 mac_muladd_9ns_9ns_9ns_18_4_1_U12 mac_muladd_9ns_9ns_9ns_18_4_1_U12 mul_32s_32s_32_1_1_U11 sum_1_fu_349_p2 add_ln30_fu_208_p2 add_ln28_1_fu_220_p2</BindInstances>
+                    <ID>151</ID>
+                    <BindInstances>add_ln27_1_fu_157_p2 add_ln27_fu_255_p2 mul_7ns_8ns_14_1_1_U10 add_ln28_fu_285_p2 add_ln36_fu_302_p2 add_ln31_fu_308_p2 mac_muladd_7ns_7ns_7ns_14_4_1_U12 mac_muladd_7ns_7ns_7ns_14_4_1_U12 mul_32s_32s_32_1_1_U11 sum_1_fu_349_p2 add_ln30_fu_208_p2 add_ln28_1_fu_220_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_example_Pipeline_5_fu_156</InstName>
+                    <InstName>grp_example_Pipeline_5_fu_158</InstName>
                     <ModuleName>example_Pipeline_5</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>156</ID>
+                    <ID>158</ID>
                     <BindInstances>empty_17_fu_99_p2</BindInstances>
                 </Instance>
             </InstancesList>
@@ -863,22 +863,22 @@
                     <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>250003</Best-caseLatency>
-                    <Average-caseLatency>250003</Average-caseLatency>
-                    <Worst-caseLatency>250003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>1.250 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.250 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>1.250 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>250003</PipelineInitiationInterval>
+                    <Best-caseLatency>10003</Best-caseLatency>
+                    <Average-caseLatency>10003</Average-caseLatency>
+                    <Worst-caseLatency>10003</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>50.015 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>50.015 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>50.015 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>10003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
                         <Slack>3.65</Slack>
-                        <TripCount>250000</TripCount>
-                        <Latency>250001</Latency>
-                        <AbsoluteTimeLatency>1.250 ms</AbsoluteTimeLatency>
+                        <TripCount>10000</TripCount>
+                        <Latency>10001</Latency>
+                        <AbsoluteTimeLatency>50.005 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -888,10 +888,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>92</FF>
+                    <FF>80</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>89</LUT>
+                    <LUT>84</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -921,22 +921,22 @@
                     <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>250003</Best-caseLatency>
-                    <Average-caseLatency>250003</Average-caseLatency>
-                    <Worst-caseLatency>250003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>1.250 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.250 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>1.250 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>250003</PipelineInitiationInterval>
+                    <Best-caseLatency>10003</Best-caseLatency>
+                    <Average-caseLatency>10003</Average-caseLatency>
+                    <Worst-caseLatency>10003</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>50.015 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>50.015 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>50.015 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>10003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
                         <Slack>3.65</Slack>
-                        <TripCount>250000</TripCount>
-                        <Latency>250001</Latency>
-                        <AbsoluteTimeLatency>1.250 ms</AbsoluteTimeLatency>
+                        <TripCount>10000</TripCount>
+                        <Latency>10001</Latency>
+                        <AbsoluteTimeLatency>50.005 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -946,10 +946,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>92</FF>
+                    <FF>80</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>89</LUT>
+                    <LUT>84</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -979,22 +979,22 @@
                     <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>250003</Best-caseLatency>
-                    <Average-caseLatency>250003</Average-caseLatency>
-                    <Worst-caseLatency>250003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>1.250 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.250 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>1.250 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>250003</PipelineInitiationInterval>
+                    <Best-caseLatency>10003</Best-caseLatency>
+                    <Average-caseLatency>10003</Average-caseLatency>
+                    <Worst-caseLatency>10003</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>50.015 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>50.015 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>50.015 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>10003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
                         <Slack>3.65</Slack>
-                        <TripCount>250000</TripCount>
-                        <Latency>250001</Latency>
-                        <AbsoluteTimeLatency>1.250 ms</AbsoluteTimeLatency>
+                        <TripCount>10000</TripCount>
+                        <Latency>10001</Latency>
+                        <AbsoluteTimeLatency>50.005 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1004,10 +1004,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>92</FF>
+                    <FF>80</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>89</LUT>
+                    <LUT>84</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1034,25 +1034,25 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>5.00</TargetClockPeriod>
                     <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.515</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.329</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>125000007</Best-caseLatency>
-                    <Average-caseLatency>125000007</Average-caseLatency>
-                    <Worst-caseLatency>125000007</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.625 sec</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.625 sec</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.625 sec</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>125000007</PipelineInitiationInterval>
+                    <Best-caseLatency>1000007</Best-caseLatency>
+                    <Average-caseLatency>1000007</Average-caseLatency>
+                    <Worst-caseLatency>1000007</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.000 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.000 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.000 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1000007</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3>
                         <Name>VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3</Name>
                         <Slack>3.65</Slack>
-                        <TripCount>125000000</TripCount>
-                        <Latency>125000005</Latency>
-                        <AbsoluteTimeLatency>0.625 sec</AbsoluteTimeLatency>
+                        <TripCount>1000000</TripCount>
+                        <Latency>1000005</Latency>
+                        <AbsoluteTimeLatency>5.000 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>7</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1065,10 +1065,10 @@
                     <DSP>4</DSP>
                     <AVAIL_DSP>6840</AVAIL_DSP>
                     <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>466</FF>
+                    <FF>437</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>601</LUT>
+                    <LUT>536</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1082,12 +1082,12 @@
             <BindNodes>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_1_fu_157_p2" SOURCE="example.cpp:27" URAM="0" VARIABLE="add_ln27_1"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln27_fu_255_p2" SOURCE="example.cpp:27" URAM="0" VARIABLE="add_ln27"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_9ns_10ns_18_1_1_U10" SOURCE="example.cpp:31" URAM="0" VARIABLE="mul_ln31"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_7ns_8ns_14_1_1_U10" SOURCE="example.cpp:31" URAM="0" VARIABLE="mul_ln31"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_285_p2" SOURCE="example.cpp:28" URAM="0" VARIABLE="add_ln28"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln36_fu_302_p2" SOURCE="example.cpp:36" URAM="0" VARIABLE="add_ln36"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln31_fu_308_p2" SOURCE="example.cpp:31" URAM="0" VARIABLE="add_ln31"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_9ns_9ns_9ns_18_4_1_U12" SOURCE="example.cpp:32" URAM="0" VARIABLE="mul_ln32"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_9ns_9ns_9ns_18_4_1_U12" SOURCE="example.cpp:32" URAM="0" VARIABLE="add_ln32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_7ns_7ns_7ns_14_4_1_U12" SOURCE="example.cpp:32" URAM="0" VARIABLE="mul_ln32"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_7ns_7ns_7ns_14_4_1_U12" SOURCE="example.cpp:32" URAM="0" VARIABLE="add_ln32"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U11" SOURCE="example.cpp:34" URAM="0" VARIABLE="mul_ln34"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="sum_1_fu_349_p2" SOURCE="example.cpp:34" URAM="0" VARIABLE="sum_1"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_27_1_VITIS_LOOP_28_2_VITIS_LOOP_30_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln30_fu_208_p2" SOURCE="example.cpp:30" URAM="0" VARIABLE="add_ln30"/>
@@ -1106,22 +1106,22 @@
                     <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>250003</Best-caseLatency>
-                    <Average-caseLatency>250003</Average-caseLatency>
-                    <Worst-caseLatency>250003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>1.250 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.250 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>1.250 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>250003</PipelineInitiationInterval>
+                    <Best-caseLatency>10003</Best-caseLatency>
+                    <Average-caseLatency>10003</Average-caseLatency>
+                    <Worst-caseLatency>10003</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>50.015 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>50.015 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>50.015 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>10003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
                         <Slack>3.65</Slack>
-                        <TripCount>250000</TripCount>
-                        <Latency>250001</Latency>
-                        <AbsoluteTimeLatency>1.250 ms</AbsoluteTimeLatency>
+                        <TripCount>10000</TripCount>
+                        <Latency>10001</Latency>
+                        <AbsoluteTimeLatency>50.005 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1131,10 +1131,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>56</FF>
+                    <FF>52</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>87</LUT>
+                    <LUT>82</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1161,13 +1161,13 @@
                     <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>126000055</Best-caseLatency>
-                    <Average-caseLatency>126000055</Average-caseLatency>
-                    <Worst-caseLatency>126000055</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.630 sec</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.630 sec</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.630 sec</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>126000056</PipelineInitiationInterval>
+                    <Best-caseLatency>1040055</Best-caseLatency>
+                    <Average-caseLatency>1040055</Average-caseLatency>
+                    <Worst-caseLatency>1040055</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.200 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.200 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.200 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1040056</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
@@ -1179,10 +1179,10 @@
                     <DSP>4</DSP>
                     <AVAIL_DSP>6840</AVAIL_DSP>
                     <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>2100</FF>
+                    <FF>2031</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>3009</LUT>
+                    <LUT>2924</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1199,7 +1199,7 @@
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands>
-        <config_export description="memory ip without self restart enabled and 200Mhz clock and offset and size saxi" display_name="add_100" output="/home/ubuntu/vitis-hls-ip-2022/saxi_interface.zip" version="2.0"/>
+        <config_export description="matmul with saxi offset 500 by 500" display_name="add_100" output="/home/ubuntu/vitis-hls-ip-2022/matmul.zip" version="2.0"/>
     </UserConfigCommands>
     <Args>
         <Arg ArgName="a" index="0" direction="inout" srcType="*" srcSize="32">
@@ -1490,10 +1490,10 @@
             <item name="Inferred Burst Summary">
                 <table>
                     <keys size="6">HW Interface, Loop, Direction, Length, Width, Location</keys>
-                    <column name="m_axi_gmem">anonymous, read, 250000, 32, example.cpp:58:3</column>
-                    <column name="m_axi_gmem">anonymous, read, 250000, 32, example.cpp:59:3</column>
-                    <column name="m_axi_gmem">anonymous, read, 250000, 32, example.cpp:60:3</column>
-                    <column name="m_axi_gmem">anonymous, write, 250000, 32, example.cpp:64:3</column>
+                    <column name="m_axi_gmem">anonymous, read, 10000, 32, example.cpp:58:3</column>
+                    <column name="m_axi_gmem">anonymous, read, 10000, 32, example.cpp:59:3</column>
+                    <column name="m_axi_gmem">anonymous, read, 10000, 32, example.cpp:60:3</column>
+                    <column name="m_axi_gmem">anonymous, write, 10000, 32, example.cpp:64:3</column>
                 </table>
             </item>
             <item name="Inferred Bursts and Widening Missed">

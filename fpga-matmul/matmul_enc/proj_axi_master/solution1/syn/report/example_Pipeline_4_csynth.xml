@@ -9,8 +9,8 @@
 <ProductFamily>virtexuplus</ProductFamily>
 <Part>xcvu9p-flga2104-2L-e</Part>
 <TopModelName>example_Pipeline_4</TopModelName>
-<TargetClockPeriod>5.00</TargetClockPeriod>
-<ClockUncertainty>1.35</ClockUncertainty>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -18,25 +18,25 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>131</Best-caseLatency>
 <Average-caseLatency>131</Average-caseLatency>
 <Worst-caseLatency>131</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.655 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.655 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.655 us</Worst-caseRealTimeLatency>
+<Best-caseRealTimeLatency>1.310 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.310 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.310 us</Worst-caseRealTimeLatency>
 <Interval-min>131</Interval-min>
 <Interval-max>131</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <Loop1>
-<Slack>3.65</Slack>
+<Slack>7.30</Slack>
 <TripCount>128</TripCount>
 <Latency>129</Latency>
-<AbsoluteTimeLatency>645</AbsoluteTimeLatency>
+<AbsoluteTimeLatency>1290</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>3</PipelineDepth>
 <InstanceList>

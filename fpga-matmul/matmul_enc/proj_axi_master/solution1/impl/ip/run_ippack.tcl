@@ -55,8 +55,8 @@ set Library     "hls"
 set IPName      "example"
 set Version     "2.0"
 set DisplayName "add_100"
-set Revision    "2112996135"
-set Description "matmul with saxi offset 500 by 500with enc of buf0 and large 100"
+set Revision    "2112993179"
+set Description "matmul with saxi offset 100 by 100 with enc"
 set Device      "virtexuplus"
 set AutoFamily  ""
 set Taxonomy    "/VITIS_HLS_IP"
@@ -83,12 +83,12 @@ example_dec_Pipeline_decryption_ctr_loop_cipher_0_p16box_188_ROM_NP_LUTRAM_1R
 example_flow_control_loop_pipe_sequential_init
 example_flow_control_loop_pipe_sequential_init
 example_dec_cipher_0_ssbox_190_ROM_NP_LUTRAM_1R
-example_fifo_w128_d2510_A
-example_fifo_w1_d2510_A
+example_fifo_w128_d256_A
+example_fifo_w1_d256_S
 example_fifo_w128_d2_S
 example_fifo_w128_d2_S
-example_fifo_w128_d2510_A
-example_fifo_w1_d2510_A
+example_fifo_w128_d256_A
+example_fifo_w1_d256_S
 example_flow_control_loop_pipe_sequential_init
 example_mul_7ns_8ns_14_1_1
 example_mul_32s_32s_32_1_1
@@ -97,12 +97,12 @@ example_flow_control_loop_pipe_sequential_init
 example_flow_control_loop_pipe_sequential_init
 example_flow_control_loop_pipe_sequential_init
 example_flow_control_loop_pipe_sequential_init
-example_fifo_w128_d2510_A_x
-example_fifo_w1_d2510_A_x
+example_fifo_w128_d256_A_x
+example_fifo_w1_d256_S_x
 example_fifo_w128_d2_S_x
 example_fifo_w128_d2_S_x
-example_fifo_w128_d2510_A_x
-example_fifo_w1_d2510_A_x
+example_fifo_w128_d256_A_x
+example_fifo_w1_d256_S_x
 example_flow_control_loop_pipe_sequential_init
 example_flow_control_loop_pipe_sequential_init
 example_crypto_buff_RAM_AUTO_1R1W
@@ -1987,7 +1987,7 @@ if {![regexp -nocase {2014\.3.*} $vivado_ver match]} {
 ipx::create_xgui_files -logo_file misc/logo.png $core
 
 ## System Info
-set user_parameters_list {clk_period 5 machine 64 combinational 0 latency undef II x}
+set user_parameters_list {clk_period 10 machine 64 combinational 0 latency undef II x}
 foreach {user_para value} $user_parameters_list {
     incr user_parameter_order
     set user_para_value [ipx::add_user_parameter $user_para $core]

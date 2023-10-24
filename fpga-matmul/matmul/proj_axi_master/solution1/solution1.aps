@@ -7,7 +7,7 @@
     </downStreamTool>
     <synthesis askAgain="true"/>
     <config>
-        <config_export description="matmul with saxi offset 500 by 500" display_name="add_100" format="ip_catalog" output="/home/ubuntu/vitis-hls-ip-2022/matmul.zip" rtl="verilog" version="2.0"/>
+        <config_export description="matmul with saxi offset 100 by 100" display_name="add_100" format="ip_catalog" output="/home/ubuntu/vitis-hls-ip-2022/matmul_100.zip" rtl="verilog" version="2.0"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf hideTrivialOp="true" isBasedOnBoard="false" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -40,8 +40,8 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ubuntu/vitis-hls-ip-2022/matmul.zip" rtl="verilog" rtlButton="true" rtlCombo="verilog">
-        <Format description="matmul with saxi offset 500 by 500" display_name="add_100" formatName="ip_catalog" version="2.0" vendor="" library="" ipname="example" taxonomy=""/>
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/ubuntu/vitis-hls-ip-2022/matmul_100.zip" rtl="verilog" rtlButton="true" rtlCombo="verilog">
+        <Format description="matmul with saxi offset 100 by 100" display_name="add_100" formatName="ip_catalog" version="2.0" vendor="" library="" ipname="example" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
         <Format formatName="syn_dcp"/>

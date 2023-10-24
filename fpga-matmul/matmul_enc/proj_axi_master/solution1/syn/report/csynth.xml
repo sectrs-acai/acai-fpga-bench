@@ -7,15 +7,15 @@
         <ProductFamily>virtexuplus</ProductFamily>
         <Part>xcvu9p-flga2104-2L-e</Part>
         <TopModelName>example</TopModelName>
-        <TargetClockPeriod>5.00</TargetClockPeriod>
-        <ClockUncertainty>1.35</ClockUncertainty>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
         <FlowTarget>vivado</FlowTarget>
     </UserAssignments>
     <PerformanceEstimates>
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+            <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
@@ -33,8 +33,8 @@
         <Resources>
             <BRAM_18K>76</BRAM_18K>
             <DSP>4</DSP>
-            <FF>15509</FF>
-            <LUT>36100</LUT>
+            <FF>15123</FF>
+            <LUT>36040</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -844,7 +844,7 @@
                     <ModuleName>example_Pipeline_VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>214</ID>
-                    <BindInstances>add_ln158_1_fu_157_p2 add_ln158_fu_255_p2 mul_7ns_8ns_14_1_1_U65 add_ln159_fu_285_p2 add_ln167_fu_302_p2 add_ln162_fu_308_p2 mac_muladd_7ns_7ns_7ns_14_4_1_U67 mac_muladd_7ns_7ns_7ns_14_4_1_U67 mul_32s_32s_32_1_1_U66 sum_1_fu_349_p2 add_ln161_fu_208_p2 add_ln159_1_fu_220_p2</BindInstances>
+                    <BindInstances>add_ln158_1_fu_157_p2 add_ln158_fu_255_p2 mul_7ns_8ns_14_1_1_U65 add_ln159_fu_285_p2 add_ln167_fu_302_p2 add_ln162_fu_308_p2 mac_muladd_7ns_7ns_7ns_14_4_1_U67 mac_muladd_7ns_7ns_7ns_14_4_1_U67 mul_32s_32s_32_1_1_U66 sum_1_fu_351_p2 add_ln161_fu_208_p2 add_ln159_1_fu_220_p2</BindInstances>
                 </Instance>
                 <Instance>
                     <InstName>grp_dec_fu_221</InstName>
@@ -853,31 +853,32 @@
                     <ID>221</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_dec_Pipeline_VITIS_LOOP_102_3_fu_208</InstName>
+                            <InstName>grp_dec_Pipeline_VITIS_LOOP_102_3_fu_192</InstName>
                             <ModuleName>dec_Pipeline_VITIS_LOOP_102_3</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>208</ID>
-                            <BindInstances>i_4_fu_83_p2</BindInstances>
+                            <ID>192</ID>
+                            <BindInstances>add_ln102_fu_93_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_updateKey_fu_216</InstName>
+                            <InstName>grp_updateKey_fu_200</InstName>
                             <ModuleName>updateKey</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>216</ID>
+                            <ID>200</ID>
                             <BindInstances>ret_V_fu_323_p2 add_ln840_fu_389_p2 Rcon_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_dec_Pipeline_decryption_ctr_loop_fu_237</InstName>
+                            <InstName>grp_dec_Pipeline_decryption_ctr_loop_fu_221</InstName>
                             <ModuleName>dec_Pipeline_decryption_ctr_loop</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>237</ID>
+                            <ID>221</ID>
                             <BindInstances>input_block_r_V_fu_4131_p2 cipher_0_p16box_188_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_dec_Pipeline_VITIS_LOOP_113_4_fu_262</InstName>
+                            <InstName>grp_dec_Pipeline_VITIS_LOOP_113_4_fu_246</InstName>
                             <ModuleName>dec_Pipeline_VITIS_LOOP_113_4</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>262</ID>
+                            <ID>246</ID>
+                            <BindInstances>add_ln115_fu_92_p2</BindInstances>
                         </Instance>
                     </InstancesList>
                     <BindInstances>ciphertextStrm_fifo_U endCiphertextStrm_fifo_U cipherkeyStrm_fifo_U IVStrm_fifo_U plaintextStrm_fifo_U endPlaintextStrm_fifo_U cipher_0_ssbox_190_U</BindInstances>
@@ -896,31 +897,32 @@
                     <ID>241</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>grp_enc_Pipeline_VITIS_LOOP_48_3_fu_208</InstName>
+                            <InstName>grp_enc_Pipeline_VITIS_LOOP_48_3_fu_192</InstName>
                             <ModuleName>enc_Pipeline_VITIS_LOOP_48_3</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>208</ID>
-                            <BindInstances>i_2_fu_83_p2</BindInstances>
+                            <ID>192</ID>
+                            <BindInstances>add_ln48_fu_93_p2</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_updateKey_fu_216</InstName>
+                            <InstName>grp_updateKey_fu_200</InstName>
                             <ModuleName>updateKey</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>216</ID>
+                            <ID>200</ID>
                             <BindInstances>ret_V_fu_323_p2 add_ln840_fu_389_p2 Rcon_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_enc_Pipeline_encryption_ctr_loop_fu_237</InstName>
+                            <InstName>grp_enc_Pipeline_encryption_ctr_loop_fu_221</InstName>
                             <ModuleName>enc_Pipeline_encryption_ctr_loop</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>237</ID>
+                            <ID>221</ID>
                             <BindInstances>input_block_r_V_fu_4131_p2 cipher_0_p16box_U</BindInstances>
                         </Instance>
                         <Instance>
-                            <InstName>grp_enc_Pipeline_VITIS_LOOP_59_4_fu_262</InstName>
+                            <InstName>grp_enc_Pipeline_VITIS_LOOP_59_4_fu_246</InstName>
                             <ModuleName>enc_Pipeline_VITIS_LOOP_59_4</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>262</ID>
+                            <ID>246</ID>
+                            <BindInstances>add_ln61_fu_92_p2</BindInstances>
                         </Instance>
                     </InstancesList>
                     <BindInstances>ciphertextStrm_fifo_U endCiphertextStrm_fifo_U cipherkeyStrm_fifo_U IVStrm_fifo_U plaintextStrm_fifo_U endPlaintextStrm_fifo_U cipher_0_ssbox_U</BindInstances>
@@ -951,27 +953,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>10003</Best-caseLatency>
                     <Average-caseLatency>10003</Average-caseLatency>
                     <Worst-caseLatency>10003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>50.015 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>50.015 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>50.015 us</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>0.100 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.100 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.100 ms</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>10003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>10000</TripCount>
                         <Latency>10001</Latency>
-                        <AbsoluteTimeLatency>50.005 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>0.100 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1009,27 +1011,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>10003</Best-caseLatency>
                     <Average-caseLatency>10003</Average-caseLatency>
                     <Worst-caseLatency>10003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>50.015 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>50.015 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>50.015 us</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>0.100 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.100 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.100 ms</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>10003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>10000</TripCount>
                         <Latency>10001</Latency>
-                        <AbsoluteTimeLatency>50.005 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>0.100 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1067,27 +1069,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>10003</Best-caseLatency>
                     <Average-caseLatency>10003</Average-caseLatency>
                     <Worst-caseLatency>10003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>50.015 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>50.015 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>50.015 us</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>0.100 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.100 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.100 ms</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>10003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>10000</TripCount>
                         <Latency>10001</Latency>
-                        <AbsoluteTimeLatency>50.005 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>0.100 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1125,27 +1127,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>131</Best-caseLatency>
                     <Average-caseLatency>131</Average-caseLatency>
                     <Worst-caseLatency>131</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.655 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.655 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.655 us</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>1.310 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.310 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.310 us</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>131</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>128</TripCount>
                         <Latency>129</Latency>
-                        <AbsoluteTimeLatency>0.645 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>1.290 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1183,27 +1185,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>1.224</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.416</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>2502</Best-caseLatency>
-                    <Average-caseLatency>2502</Average-caseLatency>
-                    <Worst-caseLatency>2502</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>12.510 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>12.510 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>12.510 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>2502</PipelineInitiationInterval>
+                    <Best-caseLatency>130</Best-caseLatency>
+                    <Average-caseLatency>130</Average-caseLatency>
+                    <Worst-caseLatency>130</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.300 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.300 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.300 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>130</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_102_3>
                         <Name>VITIS_LOOP_102_3</Name>
-                        <Slack>3.65</Slack>
-                        <TripCount>2500</TripCount>
-                        <Latency>2500</Latency>
-                        <AbsoluteTimeLatency>12.500 us</AbsoluteTimeLatency>
+                        <Slack>7.30</Slack>
+                        <TripCount>128</TripCount>
+                        <Latency>128</Latency>
+                        <AbsoluteTimeLatency>1.280 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1213,10 +1215,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>15</FF>
+                    <FF>11</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>91</LUT>
+                    <LUT>86</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1231,7 +1233,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_102_3" OPTYPE="add" PRAGMA="" RTLNAME="i_4_fu_83_p2" SOURCE="example.cpp:102" URAM="0" VARIABLE="i_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_102_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_fu_93_p2" SOURCE="example.cpp:102" URAM="0" VARIABLE="add_ln102"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1241,27 +1243,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
                     <EstimatedClockPeriod>1.912</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>12</Best-caseLatency>
                     <Average-caseLatency>12</Average-caseLatency>
                     <Worst-caseLatency>12</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>60.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>60.000 ns</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>0.120 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.120 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.120 us</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>12</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_451_1>
                         <Name>VITIS_LOOP_451_1</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>10</TripCount>
                         <Latency>10</Latency>
-                        <AbsoluteTimeLatency>50.000 ns</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>0.100 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1301,8 +1303,8 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
                     <EstimatedClockPeriod>2.769</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
@@ -1318,7 +1320,7 @@
                 <SummaryOfLoopLatency>
                     <decryption_ctr_loop>
                         <Name>decryption_ctr_loop</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -1360,9 +1362,9 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>2.424</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.416</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -1377,7 +1379,7 @@
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_113_4>
                         <Name>VITIS_LOOP_113_4</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -1390,10 +1392,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>5</FF>
+                    <FF>77</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>66</LUT>
+                    <LUT>151</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1407,13 +1409,16 @@
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_113_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln115_fu_92_p2" SOURCE="example.cpp:115" URAM="0" VARIABLE="add_ln115"/>
+            </BindNodes>
         </Module>
         <Module>
             <Name>dec</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
                     <EstimatedClockPeriod>2.769</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
@@ -1432,10 +1437,10 @@
                     <BRAM_18K>8</BRAM_18K>
                     <AVAIL_BRAM>4320</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>6549</FF>
+                    <FF>6431</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>15573</LUT>
+                    <LUT>15559</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>1</UTIL_LUT>
                     <DSP>0</DSP>
@@ -1448,11 +1453,11 @@
             </AreaEstimates>
             <BindNodes>
                 <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="ciphertextStrm_fifo_U" SOURCE="example.cpp:74" URAM="0" VARIABLE="ciphertextStrm"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="endCiphertextStrm_fifo_U" SOURCE="example.cpp:76" URAM="0" VARIABLE="endCiphertextStrm"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="endCiphertextStrm_fifo_U" SOURCE="example.cpp:76" URAM="0" VARIABLE="endCiphertextStrm"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cipherkeyStrm_fifo_U" SOURCE="example.cpp:78" URAM="0" VARIABLE="cipherkeyStrm"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="IVStrm_fifo_U" SOURCE="example.cpp:80" URAM="0" VARIABLE="IVStrm"/>
                 <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="plaintextStrm_fifo_U" SOURCE="example.cpp:82" URAM="0" VARIABLE="plaintextStrm"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="endPlaintextStrm_fifo_U" SOURCE="example.cpp:84" URAM="0" VARIABLE="endPlaintextStrm"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="endPlaintextStrm_fifo_U" SOURCE="example.cpp:84" URAM="0" VARIABLE="endPlaintextStrm"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="pragma" RTLNAME="cipher_0_ssbox_190_U" SOURCE="/home/ubuntu/git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:40" URAM="0" VARIABLE="cipher_0_ssbox_190"/>
             </BindNodes>
         </Module>
@@ -1463,27 +1468,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>131</Best-caseLatency>
                     <Average-caseLatency>131</Average-caseLatency>
                     <Worst-caseLatency>131</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.655 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.655 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.655 us</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>1.310 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.310 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.310 us</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>131</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>128</TripCount>
                         <Latency>129</Latency>
-                        <AbsoluteTimeLatency>0.645 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>1.290 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1521,29 +1526,29 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.329</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>6.546</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>1000007</Best-caseLatency>
-                    <Average-caseLatency>1000007</Average-caseLatency>
-                    <Worst-caseLatency>1000007</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>5.000 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>5.000 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>5.000 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1000007</PipelineInitiationInterval>
+                    <Best-caseLatency>1000005</Best-caseLatency>
+                    <Average-caseLatency>1000005</Average-caseLatency>
+                    <Worst-caseLatency>1000005</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>10.000 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>10.000 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>10.000 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1000005</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3>
                         <Name>VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>1000000</TripCount>
-                        <Latency>1000005</Latency>
-                        <AbsoluteTimeLatency>5.000 ms</AbsoluteTimeLatency>
+                        <Latency>1000003</Latency>
+                        <AbsoluteTimeLatency>10.000 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
-                        <PipelineDepth>7</PipelineDepth>
+                        <PipelineDepth>5</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
                     </VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3>
@@ -1554,10 +1559,10 @@
                     <DSP>4</DSP>
                     <AVAIL_DSP>6840</AVAIL_DSP>
                     <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>437</FF>
+                    <FF>287</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>536</LUT>
+                    <LUT>504</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1578,7 +1583,7 @@
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_7ns_7ns_7ns_14_4_1_U67" SOURCE="example.cpp:163" URAM="0" VARIABLE="mul_ln163"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_7ns_7ns_7ns_14_4_1_U67" SOURCE="example.cpp:163" URAM="0" VARIABLE="add_ln163"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3" OPTYPE="mul" PRAGMA="" RTLNAME="mul_32s_32s_32_1_1_U66" SOURCE="example.cpp:165" URAM="0" VARIABLE="mul_ln165"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3" OPTYPE="add" PRAGMA="" RTLNAME="sum_1_fu_349_p2" SOURCE="example.cpp:165" URAM="0" VARIABLE="sum_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3" OPTYPE="add" PRAGMA="" RTLNAME="sum_1_fu_351_p2" SOURCE="example.cpp:165" URAM="0" VARIABLE="sum_1"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln161_fu_208_p2" SOURCE="example.cpp:161" URAM="0" VARIABLE="add_ln161"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_158_1_VITIS_LOOP_159_2_VITIS_LOOP_161_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln159_1_fu_220_p2" SOURCE="example.cpp:159" URAM="0" VARIABLE="add_ln159_1"/>
             </BindNodes>
@@ -1590,27 +1595,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>1.224</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.416</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>2502</Best-caseLatency>
-                    <Average-caseLatency>2502</Average-caseLatency>
-                    <Worst-caseLatency>2502</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>12.510 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>12.510 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>12.510 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>2502</PipelineInitiationInterval>
+                    <Best-caseLatency>130</Best-caseLatency>
+                    <Average-caseLatency>130</Average-caseLatency>
+                    <Worst-caseLatency>130</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>1.300 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.300 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.300 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>130</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_48_3>
                         <Name>VITIS_LOOP_48_3</Name>
-                        <Slack>3.65</Slack>
-                        <TripCount>2500</TripCount>
-                        <Latency>2500</Latency>
-                        <AbsoluteTimeLatency>12.500 us</AbsoluteTimeLatency>
+                        <Slack>7.30</Slack>
+                        <TripCount>128</TripCount>
+                        <Latency>128</Latency>
+                        <AbsoluteTimeLatency>1.280 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1620,10 +1625,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>15</FF>
+                    <FF>11</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>91</LUT>
+                    <LUT>86</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1638,7 +1643,7 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_48_3" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_83_p2" SOURCE="example.cpp:48" URAM="0" VARIABLE="i_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_48_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_93_p2" SOURCE="example.cpp:48" URAM="0" VARIABLE="add_ln48"/>
             </BindNodes>
         </Module>
         <Module>
@@ -1648,8 +1653,8 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
                     <EstimatedClockPeriod>2.769</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
@@ -1665,7 +1670,7 @@
                 <SummaryOfLoopLatency>
                     <encryption_ctr_loop>
                         <Name>encryption_ctr_loop</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -1707,9 +1712,9 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>2.424</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.416</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -1724,7 +1729,7 @@
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_59_4>
                         <Name>VITIS_LOOP_59_4</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
                         <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
@@ -1737,10 +1742,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>5</FF>
+                    <FF>77</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>66</LUT>
+                    <LUT>151</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1754,13 +1759,16 @@
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_59_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln61_fu_92_p2" SOURCE="example.cpp:61" URAM="0" VARIABLE="add_ln61"/>
+            </BindNodes>
         </Module>
         <Module>
             <Name>enc</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
                     <EstimatedClockPeriod>2.769</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
@@ -1779,10 +1787,10 @@
                     <BRAM_18K>8</BRAM_18K>
                     <AVAIL_BRAM>4320</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>6549</FF>
+                    <FF>6431</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>15573</LUT>
+                    <LUT>15559</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>1</UTIL_LUT>
                     <DSP>0</DSP>
@@ -1795,11 +1803,11 @@
             </AreaEstimates>
             <BindNodes>
                 <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="ciphertextStrm_fifo_U" SOURCE="example.cpp:20" URAM="0" VARIABLE="ciphertextStrm"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="endCiphertextStrm_fifo_U" SOURCE="example.cpp:22" URAM="0" VARIABLE="endCiphertextStrm"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="endCiphertextStrm_fifo_U" SOURCE="example.cpp:22" URAM="0" VARIABLE="endCiphertextStrm"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="cipherkeyStrm_fifo_U" SOURCE="example.cpp:24" URAM="0" VARIABLE="cipherkeyStrm"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="IVStrm_fifo_U" SOURCE="example.cpp:26" URAM="0" VARIABLE="IVStrm"/>
                 <BindNode BINDTYPE="storage" BRAM="4" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="plaintextStrm_fifo_U" SOURCE="example.cpp:28" URAM="0" VARIABLE="plaintextStrm"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="memory" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="endPlaintextStrm_fifo_U" SOURCE="example.cpp:30" URAM="0" VARIABLE="endPlaintextStrm"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage fifo" DSP="0" ID="" IMPL="srl" LATENCY="0" LOOP="" OPTYPE="fifo" PRAGMA="" RTLNAME="endPlaintextStrm_fifo_U" SOURCE="example.cpp:30" URAM="0" VARIABLE="endPlaintextStrm"/>
                 <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="pragma" RTLNAME="cipher_0_ssbox_U" SOURCE="/home/ubuntu/git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:40" URAM="0" VARIABLE="cipher_0_ssbox"/>
             </BindNodes>
         </Module>
@@ -1810,27 +1818,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>131</Best-caseLatency>
                     <Average-caseLatency>131</Average-caseLatency>
                     <Worst-caseLatency>131</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.655 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.655 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.655 us</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>1.310 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>1.310 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>1.310 us</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>131</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>128</TripCount>
                         <Latency>129</Latency>
-                        <AbsoluteTimeLatency>0.645 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>1.290 us</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1868,27 +1876,27 @@
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>10003</Best-caseLatency>
                     <Average-caseLatency>10003</Average-caseLatency>
                     <Worst-caseLatency>10003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>50.015 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>50.015 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>50.015 us</Worst-caseRealTimeLatency>
+                    <Best-caseRealTimeLatency>0.100 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.100 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.100 ms</Worst-caseRealTimeLatency>
                     <PipelineInitiationInterval>10003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <Loop1>
                         <Name>Loop 1</Name>
-                        <Slack>3.65</Slack>
+                        <Slack>7.30</Slack>
                         <TripCount>10000</TripCount>
                         <Latency>10001</Latency>
-                        <AbsoluteTimeLatency>50.005 us</AbsoluteTimeLatency>
+                        <AbsoluteTimeLatency>0.100 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1923,9 +1931,9 @@
             <Name>example</Name>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>5.00</TargetClockPeriod>
-                    <ClockUncertainty>1.35</ClockUncertainty>
-                    <EstimatedClockPeriod>3.650</EstimatedClockPeriod>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -1946,10 +1954,10 @@
                     <DSP>4</DSP>
                     <AVAIL_DSP>6840</AVAIL_DSP>
                     <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>15509</FF>
+                    <FF>15123</FF>
                     <AVAIL_FF>2364480</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>36100</LUT>
+                    <LUT>36040</LUT>
                     <AVAIL_LUT>1182240</AVAIL_LUT>
                     <UTIL_LUT>3</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1969,7 +1977,7 @@
     </ModuleInformation>
     <FIFOInformation/>
     <UserConfigCommands>
-        <config_export description="matmul with saxi offset 500 by 500with enc of buf0 and large 400" display_name="add_100" output="/home/ubuntu/vitis-hls-ip-2022/matmul_enc_copy_buf0_large400.zip" version="2.0"/>
+        <config_export description="matmul with saxi offset 500 by 500 with enc" display_name="add_100" output="/home/ubuntu/vitis-hls-ip-2022/matmul_enc.zip" version="2.0"/>
     </UserConfigCommands>
     <Args>
         <Arg ArgName="a" index="0" direction="inout" srcType="*" srcSize="32">
@@ -2366,18 +2374,18 @@
         <Pragma type="unroll" location="../../../../git/Vitis_Libraries/security/L1/include/xf_security/aes.hpp:887" status="valid" parentFunction="process" variable="" isDirective="0" options=""/>
         <Pragma type="pipeline" location="../../../../git/Vitis_Libraries/security/L1/include/xf_security/ctr.hpp:102" status="valid" parentFunction="aesctrencrypt" variable="" isDirective="0" options="II = 1"/>
         <Pragma type="pipeline" location="../../../../git/Vitis_Libraries/security/L1/include/xf_security/ctr.hpp:232" status="valid" parentFunction="aesctrdecrypt" variable="" isDirective="0" options="II = 1"/>
-        <Pragma type="stream" location="example.cpp:21" status="valid" parentFunction="enc" variable="ciphertextStrm" isDirective="0" options="variable=ciphertextStrm depth=2500 +10"/>
-        <Pragma type="stream" location="example.cpp:23" status="valid" parentFunction="enc" variable="endCiphertextStrm" isDirective="0" options="variable=endCiphertextStrm depth=2500 +10"/>
+        <Pragma type="stream" location="example.cpp:21" status="valid" parentFunction="enc" variable="ciphertextStrm" isDirective="0" options="variable=ciphertextStrm depth=256"/>
+        <Pragma type="stream" location="example.cpp:23" status="valid" parentFunction="enc" variable="endCiphertextStrm" isDirective="0" options="variable=endCiphertextStrm depth=256"/>
         <Pragma type="stream" location="example.cpp:25" status="valid" parentFunction="enc" variable="cipherkeyStrm" isDirective="0" options="variable=cipherkeyStrm depth=2"/>
         <Pragma type="stream" location="example.cpp:27" status="valid" parentFunction="enc" variable="IVStrm" isDirective="0" options="variable=IVStrm depth=2"/>
-        <Pragma type="stream" location="example.cpp:29" status="valid" parentFunction="enc" variable="plaintextStrm" isDirective="0" options="variable=plaintextStrm depth=2500 +10"/>
-        <Pragma type="stream" location="example.cpp:31" status="valid" parentFunction="enc" variable="endPlaintextStrm" isDirective="0" options="variable=endPlaintextStrm depth=2500 +10"/>
-        <Pragma type="stream" location="example.cpp:75" status="valid" parentFunction="dec" variable="ciphertextStrm" isDirective="0" options="variable=ciphertextStrm depth=2500 +10"/>
-        <Pragma type="stream" location="example.cpp:77" status="valid" parentFunction="dec" variable="endCiphertextStrm" isDirective="0" options="variable=endCiphertextStrm depth=2500 +10"/>
+        <Pragma type="stream" location="example.cpp:29" status="valid" parentFunction="enc" variable="plaintextStrm" isDirective="0" options="variable=plaintextStrm depth=256"/>
+        <Pragma type="stream" location="example.cpp:31" status="valid" parentFunction="enc" variable="endPlaintextStrm" isDirective="0" options="variable=endPlaintextStrm depth=256"/>
+        <Pragma type="stream" location="example.cpp:75" status="valid" parentFunction="dec" variable="ciphertextStrm" isDirective="0" options="variable=ciphertextStrm depth=256"/>
+        <Pragma type="stream" location="example.cpp:77" status="valid" parentFunction="dec" variable="endCiphertextStrm" isDirective="0" options="variable=endCiphertextStrm depth=256"/>
         <Pragma type="stream" location="example.cpp:79" status="valid" parentFunction="dec" variable="cipherkeyStrm" isDirective="0" options="variable=cipherkeyStrm depth=2"/>
         <Pragma type="stream" location="example.cpp:81" status="valid" parentFunction="dec" variable="IVStrm" isDirective="0" options="variable=IVStrm depth=2"/>
-        <Pragma type="stream" location="example.cpp:83" status="valid" parentFunction="dec" variable="plaintextStrm" isDirective="0" options="variable=plaintextStrm depth=2500 +10"/>
-        <Pragma type="stream" location="example.cpp:85" status="valid" parentFunction="dec" variable="endPlaintextStrm" isDirective="0" options="variable=endPlaintextStrm depth=2500 +10"/>
+        <Pragma type="stream" location="example.cpp:83" status="valid" parentFunction="dec" variable="plaintextStrm" isDirective="0" options="variable=plaintextStrm depth=256"/>
+        <Pragma type="stream" location="example.cpp:85" status="valid" parentFunction="dec" variable="endPlaintextStrm" isDirective="0" options="variable=endPlaintextStrm depth=256"/>
         <Pragma type="interface" location="example.cpp:175" status="valid" parentFunction="example" variable="a" isDirective="0" options="m_axi port=a depth=250000 offset=slave"/>
         <Pragma type="interface" location="example.cpp:176" status="valid" parentFunction="example" variable="b" isDirective="0" options="m_axi port=b depth=250000 offset=slave"/>
         <Pragma type="interface" location="example.cpp:177" status="valid" parentFunction="example" variable="c" isDirective="0" options="m_axi port=c depth=250000 offset=slave"/>

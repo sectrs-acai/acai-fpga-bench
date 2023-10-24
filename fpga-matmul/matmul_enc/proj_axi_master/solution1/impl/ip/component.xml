@@ -1153,7 +1153,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3a7bdf35</spirit:value>
+            <spirit:value>b779c404</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1169,7 +1169,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>21e24d2e</spirit:value>
+            <spirit:value>e47f7a88</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1185,7 +1185,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b7e510ce</spirit:value>
+            <spirit:value>f0fdd821</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1201,7 +1201,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b45bd24a</spirit:value>
+            <spirit:value>edbc4cd5</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2573,11 +2573,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_fifo_w1_d2510_A.v</spirit:name>
+        <spirit:name>hdl/verilog/example_fifo_w1_d256_S.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_fifo_w1_d2510_A_x.v</spirit:name>
+        <spirit:name>hdl/verilog/example_fifo_w1_d256_S_x.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2589,11 +2589,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_fifo_w128_d2510_A.v</spirit:name>
+        <spirit:name>hdl/verilog/example_fifo_w128_d256_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_fifo_w128_d2510_A_x.v</spirit:name>
+        <spirit:name>hdl/verilog/example_fifo_w128_d256_A_x.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2754,12 +2754,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_fifo_w1_d2510_A.v</spirit:name>
+        <spirit:name>hdl/verilog/example_fifo_w1_d256_S.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_fifo_w1_d2510_A_x.v</spirit:name>
+        <spirit:name>hdl/verilog/example_fifo_w1_d256_S_x.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2774,12 +2774,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_fifo_w128_d2510_A.v</spirit:name>
+        <spirit:name>hdl/verilog/example_fifo_w128_d256_A.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_fifo_w128_d2510_A_x.v</spirit:name>
+        <spirit:name>hdl/verilog/example_fifo_w128_d256_A_x.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2924,11 +2924,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_fifo_w1_d2510_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_fifo_w1_d256_S.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_fifo_w1_d2510_A_x.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_fifo_w1_d256_S_x.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2940,11 +2940,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_fifo_w128_d2510_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_fifo_w128_d256_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_fifo_w128_d2510_A_x.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_fifo_w128_d256_A_x.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2978,7 +2978,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/example.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5edef038</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_b31ad5b8</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -3094,12 +3094,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_fifo_w1_d2510_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_fifo_w1_d256_S.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_fifo_w1_d2510_A_x.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_fifo_w1_d256_S_x.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3114,12 +3114,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_fifo_w128_d2510_A.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_fifo_w128_d256_A.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_fifo_w128_d2510_A_x.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_fifo_w128_d256_A_x.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3231,7 +3231,7 @@
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>matmul with saxi offset 500 by 500with enc of buf0 and large 100</spirit:description>
+  <spirit:description>matmul with saxi offset 100 by 100 with enc</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>C_M_AXI_GMEM_ENABLE_ID_PORTS</spirit:name>
@@ -3348,7 +3348,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="14">5</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="14">10</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>machine</spirit:name>
@@ -3377,8 +3377,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>add_100</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112996135</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-04-20T19:15:30Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112993179</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-04-18T17:59:51Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -3389,10 +3389,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="fabce4c1"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="ccffff96"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="23a4f9d2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c647054e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c2d2e267"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="dc032b62"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0ef9f560"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="aec4a86a"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="1c80d816"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

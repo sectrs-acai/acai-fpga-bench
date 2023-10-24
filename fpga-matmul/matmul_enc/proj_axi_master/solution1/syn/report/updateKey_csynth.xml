@@ -9,8 +9,8 @@
 <ProductFamily>virtexuplus</ProductFamily>
 <Part>xcvu9p-flga2104-2L-e</Part>
 <TopModelName>updateKey</TopModelName>
-<TargetClockPeriod>5.00</TargetClockPeriod>
-<ClockUncertainty>1.35</ClockUncertainty>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
 <FlowTarget>vivado</FlowTarget>
 </UserAssignments>
 
@@ -25,18 +25,18 @@
 <Best-caseLatency>12</Best-caseLatency>
 <Average-caseLatency>12</Average-caseLatency>
 <Worst-caseLatency>12</Worst-caseLatency>
-<Best-caseRealTimeLatency>60.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>60.000 ns</Worst-caseRealTimeLatency>
+<Best-caseRealTimeLatency>0.120 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.120 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.120 us</Worst-caseRealTimeLatency>
 <Interval-min>12</Interval-min>
 <Interval-max>12</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <VITIS_LOOP_451_1>
-<Slack>3.65</Slack>
+<Slack>7.30</Slack>
 <TripCount>10</TripCount>
 <Latency>10</Latency>
-<AbsoluteTimeLatency>50</AbsoluteTimeLatency>
+<AbsoluteTimeLatency>100</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>2</PipelineDepth>
 <InstanceList>

@@ -1107,7 +1107,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>759c1548</spirit:value>
+            <spirit:value>abd53ad8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1123,7 +1123,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>016c8d15</spirit:value>
+            <spirit:value>b871c249</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1139,7 +1139,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ef76bfd9</spirit:value>
+            <spirit:value>f745a697</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1155,7 +1155,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>62f6713f</spirit:value>
+            <spirit:value>8e05a8c1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2467,11 +2467,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_mac_muladd_9ns_9ns_9ns_18_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/example_mac_muladd_7ns_7ns_7ns_14_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_mul_9ns_10ns_18_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/example_mul_7ns_8ns_14_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2531,12 +2531,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_mac_muladd_9ns_9ns_9ns_18_4_1.v</spirit:name>
+        <spirit:name>hdl/verilog/example_mac_muladd_7ns_7ns_7ns_14_4_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/example_mul_9ns_10ns_18_1_1.v</spirit:name>
+        <spirit:name>hdl/verilog/example_mul_7ns_8ns_14_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2595,11 +2595,11 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_mac_muladd_9ns_9ns_9ns_18_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_mac_muladd_7ns_7ns_7ns_14_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_mul_9ns_10ns_18_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_mul_7ns_8ns_14_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2609,7 +2609,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/example.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_c5ba7a87</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_2ae50eeb</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2660,12 +2660,12 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_mac_muladd_9ns_9ns_9ns_18_4_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_mac_muladd_7ns_7ns_7ns_14_4_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/example_mul_9ns_10ns_18_1_1.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/example_mul_7ns_8ns_14_1_1.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2747,7 +2747,7 @@
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>matmul with saxi offset 500 by 500</spirit:description>
+  <spirit:description>matmul with saxi offset 100 by 100</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>C_M_AXI_GMEM_ENABLE_ID_PORTS</spirit:name>
@@ -2876,7 +2876,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="17">126000055</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="17">1040055</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -2893,8 +2893,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>add_100</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2112992765</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2023-04-18T11:05:22Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2112996861</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2023-04-21T07:21:49Z</xilinx:coreCreationDateTime>
       <xilinx:sdxKernelAttributes>
         <xilinx:sdx_kernel>true</xilinx:sdx_kernel>
         <xilinx:sdx_kernel_type>hls</xilinx:sdx_kernel_type>
@@ -2905,10 +2905,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="fabce4c1"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="ccffff96"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="f2971645"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9ddc5f3d"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d723ae80"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="dc032b62"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0ef9f560"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="5429860b"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="34b4b76d"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

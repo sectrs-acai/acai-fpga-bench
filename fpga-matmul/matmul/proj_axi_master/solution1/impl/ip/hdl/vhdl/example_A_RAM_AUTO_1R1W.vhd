@@ -12,8 +12,8 @@ entity example_A_RAM_AUTO_1R1W is
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 18;
-        AddressRange    : integer   := 250000
+        AddressWidth    : integer   := 14;
+        AddressRange    : integer   := 10000
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

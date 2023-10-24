@@ -9,7 +9,7 @@
 #define MAX_COL_SIZE 100
 
 #define ARR_SIZE 128
-#define NUM_BLOCKS 2500
+
 void enc(ap_uint<8*BLK_SIZE> buff[ARR_SIZE], ap_uint<8*BLK_SIZE> ct[ARR_SIZE]){
 
     const unsigned char key[] =
@@ -18,17 +18,17 @@ void enc(ap_uint<8*BLK_SIZE> buff[ARR_SIZE], ap_uint<8*BLK_SIZE> ct[ARR_SIZE]){
 
     const unsigned char ivec[] = "abcdefghijklmnopqrstuvwxyz";
 	hls::stream<ap_uint<BLK_SIZE*8> > ciphertextStrm("ciphertextStrm");
-	#pragma HLS stream variable=ciphertextStrm depth=NUM_BLOCKS+10
+	#pragma HLS stream variable=ciphertextStrm depth=256
 	hls::stream<bool> endCiphertextStrm("endCiphertextStrm");
-	#pragma HLS stream variable=endCiphertextStrm depth=NUM_BLOCKS+10
+	#pragma HLS stream variable=endCiphertextStrm depth=256
 	hls::stream<ap_uint<8 * KEY_SIZE>> cipherkeyStrm("cipherkeyStrm");
 	#pragma HLS stream variable=cipherkeyStrm depth=2
 	hls::stream<ap_uint<BLK_SIZE*8> > IVStrm("IVStrm");
 	#pragma HLS stream variable=IVStrm depth=2
 	hls::stream<ap_uint<BLK_SIZE*8>> plaintextStrm("plaintextStrm");
-	#pragma HLS stream variable=plaintextStrm depth=NUM_BLOCKS+10
+	#pragma HLS stream variable=plaintextStrm depth=256
 	hls::stream<bool> endPlaintextStrm("endPlaintextStrm");
-	#pragma HLS stream variable=endPlaintextStrm depth=NUM_BLOCKS+10
+	#pragma HLS stream variable=endPlaintextStrm depth=256
 
 	// generate cipherkey
 	ap_uint<8 * KEY_SIZE> keyReg;
@@ -45,8 +45,8 @@ void enc(ap_uint<8*BLK_SIZE> buff[ARR_SIZE], ap_uint<8*BLK_SIZE> ct[ARR_SIZE]){
 	}
 	IVStrm.write(IVReg);
 
-	for(unsigned int i=0; i < NUM_BLOCKS; i++){
-		plaintextStrm.write(buff[0]);
+	for(unsigned int i=0; i < BLK_SIZE*8; i++){
+		plaintextStrm.write(buff[i]);
 		endPlaintextStrm.write(false);
 	}
 	endPlaintextStrm.write(true);
@@ -57,7 +57,7 @@ void enc(ap_uint<8*BLK_SIZE> buff[ARR_SIZE], ap_uint<8*BLK_SIZE> ct[ARR_SIZE]){
     bool end = endCiphertextStrm.read();
     int index = 0;
 	while (!end) {
-			ct[0] = ciphertextStrm.read();
+			ct[index] = ciphertextStrm.read();
 			index = index + 1;
 			end = endCiphertextStrm.read();
 	}
@@ -72,17 +72,17 @@ void dec(ap_uint<8*BLK_SIZE> buff[ARR_SIZE], ap_uint<8*BLK_SIZE> pt[ARR_SIZE]){
 
     const unsigned char ivec[] = "abcdefghijklmnopqrstuvwxyz";
 	hls::stream<ap_uint<BLK_SIZE*8> > ciphertextStrm("ciphertextStrm");
-	#pragma HLS stream variable=ciphertextStrm depth=NUM_BLOCKS+10
+	#pragma HLS stream variable=ciphertextStrm depth=256
 	hls::stream<bool> endCiphertextStrm("endCiphertextStrm");
-	#pragma HLS stream variable=endCiphertextStrm depth=NUM_BLOCKS+10
+	#pragma HLS stream variable=endCiphertextStrm depth=256
 	hls::stream<ap_uint<8 * KEY_SIZE>> cipherkeyStrm("cipherkeyStrm");
 	#pragma HLS stream variable=cipherkeyStrm depth=2
 	hls::stream<ap_uint<BLK_SIZE*8> > IVStrm("IVStrm");
 	#pragma HLS stream variable=IVStrm depth=2
 	hls::stream<ap_uint<BLK_SIZE*8>> plaintextStrm("plaintextStrm");
-	#pragma HLS stream variable=plaintextStrm depth=NUM_BLOCKS+10
+	#pragma HLS stream variable=plaintextStrm depth=256
 	hls::stream<bool> endPlaintextStrm("endPlaintextStrm");
-	#pragma HLS stream variable=endPlaintextStrm depth=NUM_BLOCKS+10
+	#pragma HLS stream variable=endPlaintextStrm depth=256
 
 	// generate cipherkey
 	ap_uint<8 * KEY_SIZE> keyReg;
@@ -99,8 +99,8 @@ void dec(ap_uint<8*BLK_SIZE> buff[ARR_SIZE], ap_uint<8*BLK_SIZE> pt[ARR_SIZE]){
 	}
 	IVStrm.write(IVReg);
 
-	for(unsigned int i=0; i < NUM_BLOCKS; i++){
-		ciphertextStrm.write(buff[0]);
+	for(unsigned int i=0; i < BLK_SIZE*8; i++){
+		ciphertextStrm.write(buff[i]);
 		endCiphertextStrm.write(false);
 	}
 	endCiphertextStrm.write(true);
@@ -111,7 +111,7 @@ void dec(ap_uint<8*BLK_SIZE> buff[ARR_SIZE], ap_uint<8*BLK_SIZE> pt[ARR_SIZE]){
     bool end = endPlaintextStrm.read();
     int index = 0;
 	while (!end) {
-			pt[0] = plaintextStrm.read();
+			pt[index] = plaintextStrm.read();
 			index = index + 1;
 			end = endPlaintextStrm.read();
 	}
